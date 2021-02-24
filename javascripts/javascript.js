@@ -38,9 +38,9 @@ function directPage() {
         document.getElementById('username_error').innerHTML = 'Invalid Username!..';
     }else if ((userName != "" || password != "")) {
         if (userName == "admin" && password == "admin") {
-            window.location = "https://gobikrishnas.github.io/library/admin-page/";
+            window.location = "https://gobikrishnas.github.io/library-management/admin-page/";
         } else if(obj.password == password){
-            window.location = "https://gobikrishnas.github.io/library/user-page/";
+            window.location = "https://gobikrishnas.github.io/library-management/user-page/";
         }else {
             document.getElementById('username_error').innerHTML = '';
             document.getElementById('password_error').innerHTML = 'Invalid Password!';
