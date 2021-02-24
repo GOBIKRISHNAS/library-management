@@ -34,6 +34,7 @@ function dashboard() {
     document.getElementById("availablebooks").style.display = "none";
     document.getElementById("newarrivals").style.display = "none";
     document.getElementById("booksborrowed").style.display = "none";
+    document.getElementById("searchtab").style.display = "none";
 }
 
 function availablebooks() {
@@ -54,6 +55,7 @@ function availablebooks() {
     document.getElementById("availablebooks").style.display = "block";
     document.getElementById("newarrivals").style.display = "none";
     document.getElementById("booksborrowed").style.display = "none";
+    document.getElementById("searchtab").style.display = "none";
 }
 function newarrivals() {
 
@@ -73,6 +75,7 @@ function newarrivals() {
     document.getElementById("availablebooks").style.display = "none";
     document.getElementById("newarrivals").style.display = "block";
     document.getElementById("booksborrowed").style.display = "none";
+    document.getElementById("searchtab").style.display = "none";
 }
 function booksborrowed() {
     
@@ -87,17 +90,37 @@ function booksborrowed() {
         str = "No Books Available"
     }
 
-    document.getElementById("content3").innerHTML = str
+    document.getElementById("content3").innerHTML = str;
     document.getElementById("dashboard").style.display = "none";
     document.getElementById("availablebooks").style.display = "none";
     document.getElementById("newarrivals").style.display = "none";
     document.getElementById("booksborrowed").style.display = "block";
+    document.getElementById("searchtab").style.display = "none";
 }
 
 function search() {
-    var search = document.getElementsByName("search")[0].value;
-    sessionStorage.setItem("search_value", search);
-    location.href = "https://gobikrishnas.github.io/library/search-results/";
+    var search_variable = document.getElementsByName("search")[0].value;
+
+    str = ''
+    if (books_list.length>0){
+        for (i = 0; i < books_list.length; i++) {
+            string = (books_list[i].name).toLowerCase()
+            author_string = (books_list[i].author).toLowerCase()
+            if(string.includes(search_variable) == true || author_string.includes(search_variable) == true){
+                str = str + "<li><img src = '"+ books_list[i].img_url + "' alt='' width=180px id='pic'><div class='details'><h1>" + books_list[i].name + "</h1><p>" + books_list[i].author +"</p><p>" + books_list[i].cost + "</p><p>Books Available: " + books_list[i].books_available + "</p><input type='button' value='Borrow Now'></div></li>"
+            }
+        }
+    } else{
+        str = "No Books Available"
+    }
+    
+    document.getElementById("content4").innerHTML = str
+    document.getElementById("dashboard").style.display = "none";
+    document.getElementById("availablebooks").style.display = "none";
+    document.getElementById("newarrivals").style.display = "none";
+    document.getElementById("booksborrowed").style.display = "none";
+    document.getElementById("searchtab").style.display = "block";
+
 }
 
     
