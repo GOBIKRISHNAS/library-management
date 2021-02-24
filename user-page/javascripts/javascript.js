@@ -1,7 +1,4 @@
-var books_available = 4
-var books_borrwed = 5
-var new_arrivals = 2
-var user_name = "krishna"
+var user_name = localStorage.getItem("userName");
 
 var books_list = [
     {name: "Eating in the Age of Dieting", author: "Rujuta Diwekar", cost: "₹265.00", books_available: 2, img_url: "https://images-eu.ssl-images-amazon.com/images/I/31970VMFv5L._AC_SX184_.jpg"},
