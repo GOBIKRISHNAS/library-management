@@ -175,28 +175,34 @@ hr{
 
 #wrapper ul {
     padding: 40px 10px;
-    width: 80%;
+    width: 100%;
     list-style-type: none;
 }
 #wrapper ul li {
-    background-color:gray;
+    background-color:rgb(205, 206, 207);
     padding: 25px 0px;
     margin-bottom: 20px;
     display: table;
-    width: 100%;
+    width: 25%;
+    float: left;
+    margin-left: 20px;
 }
 #wrapper ul li img {
     margin-left: 20px;
     float: left;
-    width: 140px;
-    height: 180px;
+    width: 50px;
+    height: 100px;
     left: 10px;
 }
 #wrapper ul li .details {
     float: right;
     width: 75%;
-    margin-bottom : 10px;
-    margin-top : -10px;
+    margin-bottom : 0px;
+    margin-top : -5px;
+    font-size: 10px;
+}
+#wrapper ul li .details button{
+    font-size: 10px;
 }
 
 .searchTerm {
