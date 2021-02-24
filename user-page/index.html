@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="styles/style.css" rel="stylesheet">
+      <title>Home Page</title>
+   </head>
+   <body>
+      <div class="side-bar">
+         <div class="user-img"></div>
+         <div class="user-name"></div>
+         <div class="options-list">
+            <li><button id="dashbtn" onclick= "dashboard();">Dashboard</button></li>
+            <li><button id="abooksbtn" onclick= "availablebooks();">Available Books</button></li>
+            <li><button id="nbooksbtn" onclick = "newarrivals();">New Arrivals</button></li>
+            <li><button id="bbooksbtn" onclick = "booksborrowed();">Books Borrowed</button></li>
+            <li><button><a href= "https://gobikrishnas.github.io/library/">Logout</a></button></li>
+         </div>
+      </div>
+      <div id= "dashboard" class="dashboard">
+         <div class="top-bar">Dashboard</div>
+         <div class="content-dashboard">
+            <div class="book-details">
+               <div><hr>New Arrivals<hr><div id="new-arrivals"></div></div>
+               <div><hr>Books Borrowed<hr><div id="books-borrowed"></div></div>
+               <div><hr>Books Available<hr><div id="books-available"></div></div>
+               <div><hr>Credit Score<hr><div id="credit-score"></div></div>
+            </div>
+            <div class="graph"></div>
+         </div>
+      </div>
+      <div id= "availablebooks" class="availablebooks">
+         <div class="top-bar">Available Books</div>
+         <div id="wrapper">
+        <section>
+            <ul id="content1"></ul>
+          </section>
+      </div>
+      </div>
+      <div id= "newarrivals" class="newarrivals">
+         <div class="top-bar">Available Books</div>
+         <div id="wrapper">
+        <section>
+            <ul id="content2"></ul>
+          </section>
+      </div>
+      </div>
+      <div id= "booksborrowed" class="booksborrowed">
+         <div class="top-bar">Books Borrowed</div>
+         <div id="wrapper">
+            <section>
+                <ul id="content3"></ul>
+              </section>
+          </div>
+      </div>
+      <script src="javascripts/javascript.js"></script>
+   </body>
+</html>
