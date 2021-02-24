@@ -1,0 +1,94 @@
+body{
+  background-color: darkslategrey;
+  background-size: cover; 
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: center;
+  color: White;
+  position:absolute;
+  transform: translate(-50%, -50%);
+  top:50%;
+  left:50%
+  }
+  .form-container {
+  background-color: bisque;
+  display: none; /* Hidden by default */
+  position: absolute; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  width:400px;
+  height:350px;
+  padding:40px 38px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 #000;
+  margin:auto;
+  top:-50px;
+  left:-50px;
+  }
+  .user-img{
+  background: url('https://img.icons8.com/bubbles/2x/user-male.png') no-repeat;
+  width: 120px;
+  height: 120px;
+  background-size: 100%;
+  position:absolute;
+  top:-70px;
+  left: 180px;
+  }
+  ul.list{
+  list-style-type: none;
+  text-align:center;
+  }
+  ul.list li{
+  width:250px;
+  margin-left:35px;
+  margin-bottom: 25px;
+  }
+  ul.list li input{
+  width: 200px;
+  text-align: center;
+  padding: 10px 25px;
+  border:none;
+  background-color: white;
+  border-radius:5px;
+  }
+  ul.list li:nth-child(5){
+  color:red;
+  }
+  ul.list li input[type="submit"]{
+  width: auto;
+  text-align: center;
+  padding: 10px 25px;
+  border:none;
+  background-color: bisque;
+  border-radius:5px;
+  }
+  .close {
+  color: #aaaaaa;
+  float: left;
+  top: 12px;
+  left: 460px;
+  font-size: 28px;
+  font-weight: bold;
+  position:absolute;
+  transform: translate(-50%, -50%);
+  }
+  .close:hover,
+  .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  }
+  #myBtn{
+  padding: 10px 20px;
+  background-color:  white;
+  border: none;
+  top:-300px;
+  font-weight: bold;
+  }
+  h1{
+  font-size: 60px;
+  }
+  h2{
+  font-size: 40px;
+  }
+  .error{
+    color: red;
+  }
