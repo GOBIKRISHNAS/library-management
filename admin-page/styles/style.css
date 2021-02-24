@@ -17,7 +17,7 @@ body {
     left:250px;
     margin: auto;
     position: fixed;
-    background: rgb(205, 206, 207);
+    background: white;
     z-index: 1;
 }
 
@@ -107,16 +107,6 @@ button{
 .options-list a:link{
     text-decoration: none;
 }
-.top-bar{
-    background: darkslategray;
-    margin: auto;
-    padding: 10px;
-    font-family: Calibri, Helvetica, sans-serif; 
-    font-size: 20px;
-    color: white;
-    position: fixed;
-    width: 100%;
-}
 .content-dashboard table{
     padding: 30px;
     border: 1px solid white;
@@ -163,16 +153,43 @@ hr{
   }
 
 .graph{
-     background: url('https://i.pinimg.com/564x/fe/d0/2f/fed02f7055553a4818f3e19b04f0acdf.jpg') no-repeat;
      background-size: cover;
      position: absolute;
-     width:74%;
-     height: 60%;
-     top: 33%;
-     left: 50px;
+     width:auto;
+     height: 27%;
+     top: 34%;
+     left: 60px;
      padding: auto;
     }
 
+.graph1{
+        background-size: cover;
+        position: absolute;
+        width:auto;
+        height: auto;
+        top: 32%;
+        left: 310px;
+        padding: auto;
+       }
+.graph2{
+        background-size: cover;
+        position: absolute;
+        width:18%;
+        height: 40%;
+        top: 30%;
+        left: 570px;
+        padding: auto;
+       }
+
+.graph3{
+    background-size: cover;
+    position: absolute;
+    width:16%;
+    height: 26%;
+    top: 34%;
+    left: 850px;
+    padding: auto;
+}
 #wrapper ul {
     padding: 40px 10px;
     width: 100%;
@@ -211,7 +228,7 @@ hr{
     font-size: 16px;
     padding: 10px;
     border: 2px solid #ddd;
-    margin-top: 60px;
+    margin-top: 10px;
     margin-left: 20px;
     margin-bottom: -100px;
   }
@@ -249,3 +266,13 @@ hr{
     background: lightgreen;
     border-radius: 3px;
 }
+
+.quotes h2{
+    width: 82%;
+    text-align: center;
+    margin-top:500px;
+}
+.quotes h3{
+    margin-left:700px;
+}
+
