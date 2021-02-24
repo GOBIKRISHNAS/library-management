@@ -1,0 +1,190 @@
+body {
+    height: 100%;
+}
+.side-bar{
+    width:250px;
+    height:100%;
+    margin: auto;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: darkslategray;
+}
+.dashboard{
+    width:100%;
+    height:100%;
+    top:0px;
+    left:250px;
+    margin: auto;
+    position: fixed;
+    background: rgb(205, 206, 207);
+    z-index: 1;
+}
+
+.availablebooks{
+    display: none;
+    width:100%;
+    height:auto;
+    top:0px;
+    left:250px;
+    margin: auto;
+    position: absolute;
+    background: white;
+    z-index: 1;
+}
+.newarrivals{
+    display: none;
+    width:100%;
+    height:auto;
+    top:0px;
+    left:250px;
+    margin: auto;
+    position: absolute;
+    background: white;
+    z-index: 1;
+}
+.booksborrowed{
+    display: none;
+    width:100%;
+    height:auto;
+    top:0px;
+    left:250px;
+    margin: auto;
+    position: absolute;
+    background: white;
+    z-index: 1;
+}
+.user-img{
+    background: url('https://img.icons8.com/bubbles/2x/user-male.png') no-repeat;
+    background-size: 50%;
+    background-position-x: center;
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    vertical-align: middle;
+    
+}
+.user-name{
+    font-family: Calibri, Helvetica, sans-serif; 
+    color: white;
+    position: absolute;
+    top: 120px;
+    width: 250px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+.options-list li{
+    list-style-type: none;
+    padding-top: 15px;
+}
+.options-list{
+    top:170px;
+    left: 20px;
+    position: absolute;
+}
+button{
+    font-family: Calibri, Helvetica, sans-serif; 
+    font-size: 20px;
+    color: white;
+    background: none;
+    border: none;
+}
+.options-list a{
+    color: white;
+}
+.options-list a:link{
+    text-decoration: none;
+}
+.top-bar{
+    background: darkslategray;
+    margin: auto;
+    padding: 10px;
+    font-family: Calibri, Helvetica, sans-serif; 
+    font-size: 20px;
+    color: white;
+    position: fixed;
+    width: 100%;
+}
+.content-dashboard table{
+    padding: 30px;
+    border: 1px solid white;
+}
+.book-details {
+    display: grid;
+    position: absolute;
+    width:75%;
+    top: 50px;
+    left: 40px;
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 30px;
+    grid-row-gap: 10px;
+    padding: 10px;
+  }
+.book-details > div {
+    background: white;
+    text-align: center;
+    width: 220px;
+    height: 110px;
+    padding: 5px 0;
+    font-family: Calibri, Helvetica, sans-serif; 
+    font-size: 20px;
+    font-weight:bold;
+    color: black;
+    border-radius: 5px;
+  }
+hr{
+    border: none;
+}
+
+.book-details > div:nth-child(1) {
+    background: rgb(98, 224, 98);
+  }
+
+.book-details > div:nth-child(2) {
+    background: rgb(121, 188, 230);
+  }
+.book-details > div:nth-child(3) {
+    background: rgb(196, 55, 85);
+  }
+.book-details > div:nth-child(4) {
+    background: rgb(238, 122, 190);
+  }
+
+.graph{
+     background: url('https://i.pinimg.com/564x/fe/d0/2f/fed02f7055553a4818f3e19b04f0acdf.jpg') no-repeat;
+     background-size: cover;
+     position: absolute;
+     width:74%;
+     height: 60%;
+     top: 33%;
+     left: 50px;
+     padding: auto;
+    }
+
+#wrapper ul {
+    padding: 50px 10px;
+    width: 80%;
+    list-style-type: none;
+}
+#wrapper ul li {
+    background-color:gray;
+    padding: 25px 0px;
+    margin-bottom: 20px;
+    display: table;
+    width: 100%;
+}
+#wrapper ul li img {
+    margin-left: 20px;
+    float: left;
+    width: 140px;
+    height: 180px;
+    left: 10px;
+}
+#wrapper ul li .details {
+    float: right;
+    width: 75%;
+    margin-bottom : 10px;
+    margin-top : -10px;
+}
+
