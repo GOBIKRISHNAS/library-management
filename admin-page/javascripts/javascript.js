@@ -94,24 +94,30 @@ function newarrivals() {
 }
 function booksborrowed() {
     
-    str=""
-
-    if (books_borrowed[user_name].length>0){
-        for (i = 0; i < books_borrowed[user_name].length; i++) {
-            str = str + "<li><img src = '"+ books_borrowed[user_name][i].img_url + "' alt='' width=180px id='pic'><div class='details'><h1>" + books_borrowed[user_name][i].name + "</h1><p>" + books_borrowed[user_name][i].author +"</p><p>" + books_borrowed[user_name][i].cost + "</p><p>Borrowed Date: " + books_borrowed[user_name][i].date_of_borrow + "</p><p>Due Date: " + books_borrowed[user_name][i].date_of_return + "</p></div></li>"
+    str = ""
+    str3 = "<tr><td> S.No </td><td> Student Name </td><td> Name of the Books</tr>"
+    for(i=0;i<Object.keys(books_borrowed).length;i++){
+        key = Object.keys(books_borrowed)[i]
+        keys_value_length = books_borrowed[key].length
+        k = i+1;
+        str = "<tr><td>"+ k +"</td><td>" + key + "</td><td>"
+        str1 = ""
+        for(j=0;j<keys_value_length;j++){
+         l = j+1
+             str1 = str1 + "<p>" + books_borrowed[key][j].name + "</p>" 
         } 
-    }
-    else{
-        str = "No Books Available"
+        str2 = str + str1 + "</td></tr>"
+        str3 = str3 + str2
     }
 
-    document.getElementById("content3").innerHTML = str;
+    document.getElementById("content3").innerHTML = str3 ;
     document.getElementById("dashboard").style.display = "none";
     document.getElementById("availablebooks").style.display = "none";
     document.getElementById("newarrivals").style.display = "none";
     document.getElementById("booksborrowed").style.display = "block";
     document.getElementById("searchtab").style.display = "none";
 }
+
 
 function myFunction() { 
     var input, filter, ul, li, a, i, txtValue;
