@@ -107,6 +107,16 @@ button{
 .options-list a:link{
     text-decoration: none;
 }
+.top-bar{
+    background: darkslategray;
+    margin: auto;
+    padding: 10px;
+    font-family: Calibri, Helvetica, sans-serif; 
+    font-size: 20px;
+    color: white;
+    position: fixed;
+    width: 100%;
+}
 .content-dashboard table{
     padding: 30px;
     border: 1px solid white;
@@ -152,44 +162,6 @@ hr{
     background: rgb(238, 122, 190);
   }
 
-.graph{
-     background-size: cover;
-     position: absolute;
-     width:auto;
-     height: 27%;
-     top: 34%;
-     left: 60px;
-     padding: auto;
-    }
-
-.graph1{
-        background-size: cover;
-        position: absolute;
-        width:auto;
-        height: auto;
-        top: 32%;
-        left: 310px;
-        padding: auto;
-       }
-.graph2{
-        background-size: cover;
-        position: absolute;
-        width:18%;
-        height: 40%;
-        top: 30%;
-        left: 570px;
-        padding: auto;
-       }
-
-.graph3{
-    background-size: cover;
-    position: absolute;
-    width:16%;
-    height: 26%;
-    top: 34%;
-    left: 850px;
-    padding: auto;
-}
 #wrapper ul {
     padding: 40px 10px;
     width: 100%;
@@ -221,7 +193,6 @@ hr{
 #wrapper ul li .details button{
     font-size: 10px;
 }
-
 .searchTerm {
     background-repeat: no-repeat;
     width: 75%;
@@ -232,39 +203,44 @@ hr{
     margin-left: 20px;
     margin-bottom: -100px;
   }
- 
-.booksborrowed table {
-    font-family: arial, sans-serif;
-    width: 75%;
-    margin-top: 60px;
-    margin-left: auto;
-    margin-right: auto;
-    position: fixed;
-    left: 280px;
-  }
-  
-.booksborrowed td, .booksborrowed th {
-    border: 1px solid #dddddd;
-    text-align: center;
-    padding: 8px;
-  }
-  
-.top-bar button{
-    margin: auto;
-   text-align: left;
-}
 
-.download button{
-    display: flex;
-    margin-top: 50px;
-    margin-left: 30px;
-    margin-bottom: -40px;
-    font-family: Calibri, Helvetica, sans-serif; 
-    font-size: 20px;
-    color: black;
-    font-weight: bold;
-    background: lightgreen;
-    border-radius: 3px;
+  .graph{
+    background-size: cover;
+    position: absolute;
+    width:auto;
+    height: 27%;
+    top: 34%;
+    left: 60px;
+    padding: auto;
+   }
+
+.graph1{
+       background-size: cover;
+       position: absolute;
+       width:auto;
+       height: auto;
+       top: 32%;
+       left: 310px;
+       padding: auto;
+      }
+.graph2{
+       background-size: cover;
+       position: absolute;
+       width:18%;
+       height: 40%;
+       top: 30%;
+       left: 570px;
+       padding: auto;
+      }
+
+.graph3{
+   background-size: cover;
+   position: absolute;
+   width:16%;
+   height: 26%;
+   top: 34%;
+   left: 850px;
+   padding: auto;
 }
 
 .quotes h2{
@@ -275,4 +251,3 @@ hr{
 .quotes h3{
     margin-left:700px;
 }
-
