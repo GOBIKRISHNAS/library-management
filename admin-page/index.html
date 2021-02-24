@@ -21,7 +21,6 @@
          </div>
       </div>
       <div id= "dashboard" class="dashboard">
-         <div class="top-bar">Dashboard</div>
          <div class="content-dashboard">
             <div class="book-details">
                <div><hr>New Arrivals<hr><div id="new-arrivals"></div></div>
@@ -29,11 +28,17 @@
                <div><hr>Books Available<hr><div id="books-available"></div></div>
                <div><hr>Active Users<hr><div id="total-users"></div></div>
             </div>
-            <div class="graph"></div>
+            <img class="graph" src="https://cdn.iconscout.com/icon/free/png-256/horizontal-bar-chart-1549982-1316360.png">
+            <img class="graph1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxcVoIwi70MiqMcV1GlIPMZypJNBk27hz2eA&usqp=CAU">
+            <img class="graph2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_c1yQK6kuraqE-VMyzE_ySMXjdmaLP-Lnww&usqp=CAU">
+            <img class="graph3" src="https://lh3.googleusercontent.com/proxy/jxFHqCxFm5aTr6t3rmfixuJ1lPxJ_I-o6gIydhxFuBLS8jmmtdeJ65MFV6pfsvwVC53u45pKkdQq941EJsfWsmkeDZt-iRre-d6uXA">
+            <div class="quotes">
+               <h2><q>I have always imagined that Paradise will be a kind of a Library</q></h2>
+               <h3>- Jorge Luis Borges .</h3>
+             </div>
          </div>
       </div>
       <div id= "availablebooks" class="availablebooks">
-         <div class="top-bar">Available Books</div>
          <input type="text" name ="search" class="searchTerm" id="myInput" onkeyup="myFunction()" placeholder="Search for books by name or author..." title="Type in a name">
          <div id="wrapper">
         <section>
@@ -42,7 +47,6 @@
       </div>
       </div>
       <div id= "newarrivals" class="newarrivals">
-         <div class="top-bar">New Arrivals</div>
          <div id="wrapper">
         <section>
             <ul id="content2"></ul>
@@ -50,13 +54,11 @@
       </div>
       </div>
       <div id= "booksborrowed" class="booksborrowed">
-         <div class="top-bar">Books Borrowed</div>
          <div class="download"><button onclick="exportTableToExcel('content3')">Download Now</button></div>
          <div><table id="content3"></table></div>
          
       </div>
       <div id= "searchtab" class="searchtab">
-         <div class="top-bar">Available Books</div>
          <div class="search-text">Search results..</div>
          <div id="wrapper">
             <section>
