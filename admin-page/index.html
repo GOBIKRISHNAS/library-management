@@ -34,10 +34,7 @@
       </div>
       <div id= "availablebooks" class="availablebooks">
          <div class="top-bar">Available Books</div>
-         <div class="search">
-            <input type="text" name ="search" class="searchTerm" placeholder="Search for books by name or author...">
-            <button type="submit" class="searchButton" onclick="search();">Search</button>
-         </div>
+         <input type="text" name ="search" class="searchTerm" id="myInput" onkeyup="myFunction()" placeholder="Search for books by name or author..." title="Type in a name">
          <div id="wrapper">
         <section>
             <ul id="content1"></ul>
