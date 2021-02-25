@@ -180,13 +180,12 @@ hr{
         left: 570px;
         padding: auto;
        }
-
 .graph3{
     background-size: cover;
     position: absolute;
-    width:16%;
-    height: 26%;
-    top: 34%;
+    width:auto;
+    height: auto;
+    top: 31%;
     left: 850px;
     padding: auto;
 }
