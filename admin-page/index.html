@@ -18,16 +18,15 @@
             <li><button class="tabslink" id="bbooksbtn" onclick = "booksborrowed();">Books Borrowed</button></li>
             <li><button class="tabslink" id="addbooksbtn" onclick = "addbooks();">Add Books</button></li>
             <li><button class="tabslink"><a href= "https://gobikrishnas.github.io/library-management/">Logout</a></button></li>
-            
          </div>
       </div>
       <div id= "dashboard" class="dashboard">
          <div class="content-dashboard">
             <div class="book-details">
-               <div><hr>New Arrivals<hr><div id="new-arrivals"></div></div>
-               <div><hr>Books Borrowed<hr><div id="books-borrowed"></div></div>
-               <div><hr>Books Available<hr><div id="books-available"></div></div>
-               <div><hr>Active Users<hr><div id="total-users"></div></div>
+               <button onclick = "newarrivals();"><div><hr>New Arrivals<hr><div id="new-arrivals"></div></div></button>
+               <button onclick = "booksborrowed();"><div><hr>Books Borrowed<hr><div id="books-borrowed"></div></div></button>
+               <button onclick= "availablebooks();"><div><hr>Books Available<hr><div id="books-available"></div></div></button>
+               <button><div><hr>Active Users<hr><div id="total-users"></div></div></button>
             </div>
             <img class="graph" src="https://cdn.iconscout.com/icon/free/png-256/horizontal-bar-chart-1549982-1316360.png">
             <img class="graph1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxcVoIwi70MiqMcV1GlIPMZypJNBk27hz2eA&usqp=CAU">
