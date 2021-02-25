@@ -41,6 +41,13 @@ document.getElementById("credit-score").innerHTML = books_borrowed[user_name].le
 
 
 function dashboard() {
+
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    
+    var tabsin = document.getElementsByClassName("tabslink")
+    tabsin[0].className = tabsin[2].className.replace("tabslink", "tabslink active");
+
     document.getElementById("dashboard").style.display = "block";
     document.getElementById("availablebooks").style.display = "none";
     document.getElementById("newarrivals").style.display = "none";
@@ -60,6 +67,11 @@ function availablebooks() {
     else{
         str = "NO Books Available"
     }
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    
+    var tabsin = document.getElementsByClassName("tabslink")
+    tabsin[1].className = tabsin[2].className.replace("tabslink", "tabslink active");
 
     document.getElementById("content1").innerHTML = str
     document.getElementById("dashboard").style.display = "none";
@@ -80,7 +92,12 @@ function newarrivals() {
     else{
         str = "NO Books Available"
     }
-
+   
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    
+    var tabsin = document.getElementsByClassName("tabslink")
+    tabsin[2].className = tabsin[2].className.replace("tabslink", "tabslink active");
     document.getElementById("content2").innerHTML = str
     document.getElementById("dashboard").style.display = "none";
     document.getElementById("availablebooks").style.display = "none";
@@ -100,6 +117,12 @@ function booksborrowed() {
     else{
         str = "No Books Available"
     }
+
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    
+    var tabsin = document.getElementsByClassName("tabslink")
+    tabsin[3].className = tabsin[2].className.replace("tabslink", "tabslink active");
 
     document.getElementById("content3").innerHTML = str;
     document.getElementById("dashboard").style.display = "none";
