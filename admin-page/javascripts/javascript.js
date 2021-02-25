@@ -56,7 +56,7 @@ function dashboard() {
     document.getElementById("availablebooks").style.display = "none";
     document.getElementById("newarrivals").style.display = "none";
     document.getElementById("booksborrowed").style.display = "none";
-    document.getElementById("searchtab").style.display = "none";
+    document.getElementById("addbooks").style.display = "none";
 }
 
 function availablebooks() {
@@ -83,7 +83,7 @@ function availablebooks() {
     document.getElementById("availablebooks").style.display = "block";
     document.getElementById("newarrivals").style.display = "none";
     document.getElementById("booksborrowed").style.display = "none";
-    document.getElementById("searchtab").style.display = "none";
+    document.getElementById("addbooks").style.display = "none";
 }
 function newarrivals() {
 
@@ -109,7 +109,7 @@ function newarrivals() {
     document.getElementById("availablebooks").style.display = "none";
     document.getElementById("newarrivals").style.display = "block";
     document.getElementById("booksborrowed").style.display = "none";
-    document.getElementById("searchtab").style.display = "none";
+    document.getElementById("addbooks").style.display = "none";
 }
 function booksborrowed() {
     
@@ -140,7 +140,7 @@ function booksborrowed() {
     document.getElementById("availablebooks").style.display = "none";
     document.getElementById("newarrivals").style.display = "none";
     document.getElementById("booksborrowed").style.display = "block";
-    document.getElementById("searchtab").style.display = "none";
+    document.getElementById("addbooks").style.display = "none";
 }
 
 function addbooks(){
@@ -149,6 +149,12 @@ function addbooks(){
     
     var tabsin = document.getElementsByClassName("tabslink")
     tabsin[4].className = tabsin[2].className.replace("tabslink", "tabslink active");
+
+    document.getElementById("dashboard").style.display = "none";
+    document.getElementById("availablebooks").style.display = "none";
+    document.getElementById("newarrivals").style.display = "none";
+    document.getElementById("booksborrowed").style.display = "none";
+    document.getElementById("addbooks").style.display = "block";
 }
 function myFunction() { 
     var input, filter, ul, li, a, i, txtValue;
