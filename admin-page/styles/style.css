@@ -91,7 +91,7 @@ body {
 }
 .options-list{
     top:170px;
-    left: 20px;
+    width: 100%;
     position: absolute;
 }
 button{
@@ -196,7 +196,7 @@ hr{
     list-style-type: none;
 }
 #wrapper ul li {
-     background-color:rgb(230, 223, 224);
+    background-color: lightsteelblue;
     padding: 25px 0px;
     margin-bottom: 20px;
     display: table;
@@ -219,9 +219,17 @@ hr{
     font-size: 10px;
 }
 #wrapper ul li .details button{
-    font-size: 10px;
+    position: absolute;
+    font-size: 15px;
+    color: black;
+    margin-left: 160px;
+    margin-top: -26px;
+    border-radius: 4px;
+    background-color: rgb(247, 68, 68);
 }
-
+#wrapper ul li a{
+    color: black;
+}
 .searchTerm {
     background-repeat: no-repeat;
     width: 75%;
@@ -276,3 +284,17 @@ hr{
     margin-left:700px;
 }
 
+.tabslink {
+    font-family: Calibri, Helvetica, sans-serif; 
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-size: 20px;
+    width: 100%
+  }
+
+  .active, .tabslink:hover {
+    background-color: white;
+    color: Black;
+  }
