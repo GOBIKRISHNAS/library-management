@@ -61,7 +61,7 @@ function availablebooks() {
 
     if (books_list.length>0){
         for (i = 0; i < books_list.length; i++) {
-            str = str + "<li><a href='#'><img src = '"+ books_list[i].img_url + "' alt='' width=180px id='pic'><div class='details'><h1>" + books_list[i].name + "</h1><p>" + books_list[i].author +"</p><p>" + books_list[i].cost + "</p><p>Books Available: " + books_list[i].books_available + "</p></div></a></li>"
+            str = str + "<li><a href='#'><img src = '"+ books_list[i].img_url + "' alt='' width=180px id='pic'><div class='details'><h1>" + books_list[i].name + "</h1><p>" + books_list[i].author +"</p><p>" + books_list[i].cost + "</p><p>Books Available: " + books_list[i].books_available + "</p><button>Borrow</button></div></a></li>"
         } 
     }
     else{
@@ -86,7 +86,7 @@ function newarrivals() {
 
     if (new_arrivals.length>0){
         for (i = 0; i < new_arrivals.length; i++) {
-            str = str + "<li><a href='#'><img src = '"+ new_arrivals[i].img_url + "' alt='' width=180px id='pic'><div class='details'><h1>" + new_arrivals[i].name + "</h1><p>" + new_arrivals[i].author +"</p><p>" + new_arrivals[i].cost + "</p><p>Books Available: " + new_arrivals[i].books_available + "</p></div></a></li>"
+            str = str + "<li><a href='#'><img src = '"+ new_arrivals[i].img_url + "' alt='' width=180px id='pic'><div class='details'><h1>" + new_arrivals[i].name + "</h1><p>" + new_arrivals[i].author +"</p><p>" + new_arrivals[i].cost + "</p><p>Books Available: " + new_arrivals[i].books_available + "</p><button>Borrow</button></div></a></li>"
         } 
     }
     else{
@@ -111,7 +111,7 @@ function booksborrowed() {
 
     if (books_borrowed[user_name].length>0){
         for (i = 0; i < books_borrowed[user_name].length; i++) {
-            str = str + "<li><img src = '"+ books_borrowed[user_name][i].img_url + "' alt='' width=180px id='pic'><div class='details'><h1>" + books_borrowed[user_name][i].name + "</h1><p>" + books_borrowed[user_name][i].author +"</p><p>" + books_borrowed[user_name][i].cost + "</p><p>Borrowed Date: " + books_borrowed[user_name][i].date_of_borrow + "</p><p>Due Date: " + books_borrowed[user_name][i].date_of_return + "</p></div></li>"
+            str = str + "<li><img src = '"+ books_borrowed[user_name][i].img_url + "' alt='' width=180px id='pic'><div class='details'><h1>" + books_borrowed[user_name][i].name + "</h1><p>" + books_borrowed[user_name][i].author +"</p><p>" + books_borrowed[user_name][i].cost + "</p><p>Due Date: " + books_borrowed[user_name][i].date_of_return + "</p><button>Return</button></div></li>"
         } 
     }
     else{
