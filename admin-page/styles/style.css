@@ -344,6 +344,7 @@ hr{
 
 form {   
   margin: auto;
+  margin-top: -50px;
   width: 40%;
   padding: 80px 10px;
 }
@@ -370,7 +371,7 @@ form {
     background-color: #4CAF50;   
     width: 100%;  
     color: orange;   
-    padding: 15px;   
+    padding: 10px;   
     margin: 8px 0px;   
     border: none;   
     cursor: pointer;  
