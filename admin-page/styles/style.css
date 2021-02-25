@@ -133,7 +133,7 @@ button{
     grid-row-gap: 10px;
     padding: 10px;
   }
-.book-details > div {
+.book-details > button{
     background: white;
     text-align: center;
     width: 220px;
@@ -149,17 +149,17 @@ hr{
     border: none;
 }
 
-.book-details > div:nth-child(1) {
+.book-details > button:nth-child(1) {
     background: rgb(98, 224, 98);
   }
 
-.book-details > div:nth-child(2) {
+.book-details > button:nth-child(2) {
     background: rgb(121, 188, 230);
   }
-.book-details > div:nth-child(3) {
+.book-details > button:nth-child(3) {
     background: rgb(196, 55, 85);
   }
-.book-details > div:nth-child(4) {
+.book-details > button:nth-child(4) {
     background: rgb(238, 122, 190);
   }
 
