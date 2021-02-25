@@ -45,6 +45,13 @@ document.getElementById("total-users").innerHTML = Object.keys(books_borrowed).l
 
 
 function dashboard() {
+
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    
+    var tabsin = document.getElementsByClassName("tabslink")
+    tabsin[0].className = tabsin[2].className.replace("tabslink", "tabslink active");
+
     document.getElementById("dashboard").style.display = "block";
     document.getElementById("availablebooks").style.display = "none";
     document.getElementById("newarrivals").style.display = "none";
@@ -58,12 +65,18 @@ function availablebooks() {
 
     if (books_list.length>0){
         for (i = 0; i < books_list.length; i++) {
-            str = str + "<li><a href='#'><img src = '"+ books_list[i].img_url + "' alt='' width=180px id='pic'><div class='details'><h1>" + books_list[i].name + "</h1><p>" + books_list[i].author +"</p><p>" + books_list[i].cost + "</p><p>Books Available: " + books_list[i].books_available + "</p></div></a></li>"
+            str = str + "<li><a href='#'><img src = '"+ books_list[i].img_url + "' alt='' width=180px id='pic'><div class='details'><h1>" + books_list[i].name + "</h1><p>" + books_list[i].author +"</p><p>" + books_list[i].cost + "</p><p>Books Available: " + books_list[i].books_available + "</p><button>Remove</button></div></a></li>"
         } 
     }
     else{
         str = "NO Books Available"
     }
+    
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    
+    var tabsin = document.getElementsByClassName("tabslink")
+    tabsin[1].className = tabsin[2].className.replace("tabslink", "tabslink active");
 
     document.getElementById("content1").innerHTML = str
     document.getElementById("dashboard").style.display = "none";
@@ -78,12 +91,18 @@ function newarrivals() {
 
     if (new_arrivals.length>0){
         for (i = 0; i < new_arrivals.length; i++) {
-            str = str + "<li><a href='#'><img src = '"+ new_arrivals[i].img_url + "' alt='' width=180px id='pic'><div class='details'><h1>" + new_arrivals[i].name + "</h1><p>" + new_arrivals[i].author +"</p><p>" + new_arrivals[i].cost + "</p><p>Books Available: " + new_arrivals[i].books_available + "</p></div></a></li>"
+            str = str + "<li><a href='#'><img src = '"+ new_arrivals[i].img_url + "' alt='' width=180px id='pic'><div class='details'><h1>" + new_arrivals[i].name + "</h1><p>" + new_arrivals[i].author +"</p><p>" + new_arrivals[i].cost + "</p><p>Books Available: " + new_arrivals[i].books_available + "</p><button>Remove</button></div></a></li>"
         } 
     }
     else{
         str = "NO Books Available"
     }
+     
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    
+    var tabsin = document.getElementsByClassName("tabslink")
+    tabsin[2].className = tabsin[2].className.replace("tabslink", "tabslink active");
 
     document.getElementById("content2").innerHTML = str
     document.getElementById("dashboard").style.display = "none";
@@ -109,6 +128,12 @@ function booksborrowed() {
         str2 = str + str1 + "</td></tr>"
         str3 = str3 + str2
     }
+    
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    
+    var tabsin = document.getElementsByClassName("tabslink")
+    tabsin[3].className = tabsin[2].className.replace("tabslink", "tabslink active");
 
     document.getElementById("content3").innerHTML = str3 ;
     document.getElementById("dashboard").style.display = "none";
@@ -118,7 +143,13 @@ function booksborrowed() {
     document.getElementById("searchtab").style.display = "none";
 }
 
-
+function addbooks(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    
+    var tabsin = document.getElementsByClassName("tabslink")
+    tabsin[4].className = tabsin[2].className.replace("tabslink", "tabslink active");
+}
 function myFunction() { 
     var input, filter, ul, li, a, i, txtValue;
     input = document.getElementById("myInput");
