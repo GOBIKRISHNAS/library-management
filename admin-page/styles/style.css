@@ -54,6 +54,17 @@ body {
     background: white;
     z-index: 1;
 }
+.addbooks{
+    display: none;
+    width:100%;
+    height:auto;
+    top:0px;
+    left:250px;
+    margin: auto;
+    position: absolute;
+    background: white;
+    z-index: 1;
+}
 .searchtab{
     display: none;
     width:100%;
@@ -180,6 +191,7 @@ hr{
         left: 570px;
         padding: auto;
        }
+
 .graph3{
     background-size: cover;
     position: absolute;
@@ -297,3 +309,37 @@ hr{
     background-color: white;
     color: Black;
   }
+
+form {   
+  margin: auto;
+  width: 40%;
+  padding: 80px 10px;
+}
+.container input[type=text]{   
+    width: 100%;   
+    margin: auto;  
+    padding: 12px 20px;   
+    display: inline-block;    
+    box-sizing: border-box;   
+} 
+.error{
+    color: red;
+  }
+.add-book button:hover {   
+    opacity: 0.7;   
+}    
+.container {   
+    padding: 25px; 
+    margin-left: -100px;
+    margin-right: 100px;
+    background: lightpink;
+}  
+.add-book button{
+    background-color: #4CAF50;   
+    width: 100%;  
+    color: orange;   
+    padding: 15px;   
+    margin: 8px 0px;   
+    border: none;   
+    cursor: pointer;  
+}
