@@ -168,7 +168,7 @@ hr{
     list-style-type: none;
 }
 #wrapper ul li {
-    background-color:rgb(205, 206, 207);
+    background-color: lightsteelblue;
     padding: 25px 0px;
     margin-bottom: 20px;
     display: table;
@@ -191,7 +191,13 @@ hr{
     font-size: 10px;
 }
 #wrapper ul li .details button{
-    font-size: 10px;
+    position: absolute;
+    font-size: 15px;
+    color: black;
+    margin-left: 160px;
+    margin-top: -26px;
+    border-radius: 4px;
+    background-color: lightgreen;
 }
 .searchTerm {
     background-repeat: no-repeat;
@@ -260,8 +266,7 @@ hr{
     font-size: 20px;
     width: 100%
   }
-  
-  /* Style the active class, and buttons on mouse-over */
+
   .active, .tabslink:hover {
     background-color: white;
     color: Black;
