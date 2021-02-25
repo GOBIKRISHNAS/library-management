@@ -8,7 +8,7 @@ body {
     position: fixed;
     top: 0px;
     left: 0px;
-    background-color: darkslategray;
+    background-color: lightseagreen;
 }
 .dashboard{
     width:100%;
@@ -53,6 +53,38 @@ body {
     position: absolute;
     background: white;
     z-index: 1;
+}
+.bookspopup{
+    display: none;
+    width:78%;
+    height:320px;
+    top:60px;
+    left:30px;
+    margin: auto;
+    position: absolute;
+    background: lightseagreen;
+    z-index: 1;
+}
+.bookspopup img{
+    margin-top: 0px;
+    margin-left: 0px;
+}
+#bookspopup ul .details {
+    float: right;
+    width: 75%;
+    text-align: justify;
+    margin-bottom : 0px;
+    margin-top : -10px;
+    margin-right: 20px;
+    font-size: 14px;
+}
+#bookspopup ul .details button{
+    position: absolute;
+    font-size: 15px;
+    color: black;
+    margin-top: auto;
+    border-radius: 4px;
+    background-color: rgb(247, 68, 68);
 }
 .searchtab{
     display: none;
@@ -149,17 +181,17 @@ hr{
 }
 
 .book-details > button:nth-child(1) {
-    background: rgb(98, 224, 98);
+    background: rgb(163, 253, 163);
   }
 
 .book-details > button:nth-child(2) {
-    background: rgb(121, 188, 230);
+    background: rgb(166, 210, 238);
   }
 .book-details > button:nth-child(3) {
-    background: rgb(196, 55, 85);
+    background: rgb(233, 143, 163);
   }
 .book-details > button:nth-child(4) {
-    background: rgb(238, 122, 190);
+    background: rgb(230, 141, 193);
   }
 
 #wrapper ul {
@@ -168,9 +200,9 @@ hr{
     list-style-type: none;
 }
 #wrapper ul li {
-    background-color: lightsteelblue;
-    padding: 25px 0px;
-    margin-bottom: 20px;
+    background-color: lightgreen;
+    padding: 20px 0px;
+    margin-bottom: 10px;
     display: table;
     width: 25%;
     float: left;
@@ -180,14 +212,14 @@ hr{
     margin-left: 20px;
     float: left;
     width: 50px;
-    height: 100px;
+    height: 90px;
     left: 10px;
 }
 #wrapper ul li .details {
     float: right;
     width: 75%;
     margin-bottom : 0px;
-    margin-top : -5px;
+    margin-top : -10px;
     font-size: 10px;
 }
 #wrapper ul li .details button{
@@ -197,14 +229,14 @@ hr{
     margin-left: 160px;
     margin-top: -26px;
     border-radius: 4px;
-    background-color: lightgreen;
+    background-color:  rgb(247, 68, 68);;
 }
 #wrapper ul li a{
     color: black;
 }
 .searchTerm {
     background-repeat: no-repeat;
-    width: 75%;
+    width: 77%;
     font-size: 16px;
     padding: 10px;
     border: 2px solid #ddd;
