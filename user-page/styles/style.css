@@ -238,17 +238,15 @@ hr{
        left: 570px;
        padding: auto;
       }
-
 .graph3{
-   background-size: cover;
-   position: absolute;
-   width:16%;
-   height: 26%;
-   top: 34%;
-   left: 850px;
-   padding: auto;
+    background-size: cover;
+    position: absolute;
+    width:auto;
+    height: auto;
+    top: 31%;
+    left: 850px;
+    padding: auto;
 }
-
 .quotes h2{
     width: 82%;
     text-align: center;
