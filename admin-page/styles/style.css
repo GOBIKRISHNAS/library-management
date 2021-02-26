@@ -8,7 +8,7 @@ body {
     position: fixed;
     top: 0px;
     left: 0px;
-    background-color: lightseagreen;
+    background-color: rgb(62, 62, 112);
 }
 .dashboard{
     width:100%;
@@ -64,38 +64,6 @@ body {
     position: absolute;
     background: white;
     z-index: 1;
-}
-.bookspopup{
-    display: none;
-    width:78%;
-    height:320px;
-    top:60px;
-    left:30px;
-    margin: auto;
-    position: absolute;
-    background: lightseagreen;
-    z-index: 1;
-}
-.bookspopup img{
-    margin-top: 0px;
-    margin-left: 0px;
-}
-#bookspopup ul .details {
-    float: right;
-    width: 75%;
-    text-align: justify;
-    margin-bottom : 0px;
-    margin-top : -10px;
-    margin-right: 20px;
-    font-size: 14px;
-}
-#bookspopup ul .details button{
-    position: absolute;
-    font-size: 15px;
-    color: black;
-    margin-top: auto;
-    border-radius: 4px;
-    background-color: rgb(247, 68, 68);
 }
 .searchtab{
     display: none;
@@ -239,7 +207,7 @@ hr{
     list-style-type: none;
 }
 #wrapper ul li {
-    background-color: lightgreen;
+    background-color: rgb(200, 200, 245);
     padding: 20px 0px;
     margin-bottom: 10px;
     display: table;
@@ -268,7 +236,7 @@ hr{
     margin-left: 160px;
     margin-top: -26px;
     border-radius: 4px;
-    background-color: rgb(247, 68, 68);
+    background-color:  rgb(158, 158, 161);
 }
 #wrapper ul li a{
     color: black;
@@ -365,7 +333,7 @@ form {
     padding: 25px; 
     margin-left: -100px;
     margin-right: 100px;
-    background: lightpink;
+    background: rgb(200, 200, 245);
 }  
 .add-book button{
     background-color: #4CAF50;   
@@ -375,4 +343,14 @@ form {
     margin: 8px 0px;   
     border: none;   
     cursor: pointer;  
+}
+#wrapper ul li .details .close{
+    position: absolute;
+    font-size: 15px;
+    color: black;
+    margin-left: 70px;;
+    margin-top: auto;
+    border-radius: 4px;
+    background-color: rgb(158, 158, 161);
+    width: 65px;
 }

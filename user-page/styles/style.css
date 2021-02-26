@@ -8,7 +8,7 @@ body {
     position: fixed;
     top: 0px;
     left: 0px;
-    background-color: lightseagreen;
+    background-color: rgb(62, 62, 112);
 }
 .dashboard{
     width:100%;
@@ -200,7 +200,7 @@ hr{
     list-style-type: none;
 }
 #wrapper ul li {
-    background-color: lightgreen;
+    background-color: rgb(200, 200, 245);
     padding: 20px 0px;
     margin-bottom: 10px;
     display: table;
@@ -229,7 +229,7 @@ hr{
     margin-left: 160px;
     margin-top: -26px;
     border-radius: 4px;
-    background-color:  rgb(247, 68, 68);;
+    background-color:  rgb(158, 158, 161);
 }
 #wrapper ul li a{
     color: black;
@@ -304,3 +304,13 @@ hr{
     background-color: white;
     color: Black;
   }
+  #wrapper ul li .details .close{
+    position: absolute;
+    font-size: 15px;
+    color: black;
+    margin-left: 70px;;
+    margin-top: auto;
+    border-radius: 4px;
+    background-color: rgb(158, 158, 161);
+    width: 65px;
+}
