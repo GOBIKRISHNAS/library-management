@@ -1,5 +1,5 @@
 body{
-  background-color: darkslategrey;
+  background-color: rgb(132, 132, 190);
   background-size: cover; 
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   text-align: center;
@@ -91,4 +91,104 @@ body{
   }
   .error{
     color: red;
+  }
+
+  @media only screen and (max-width:400px) {
+    body{
+      background-color: rgb(132, 132, 190);
+      background-size: cover; 
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      text-align: center;
+      color: White;
+      position:absolute;
+      transform: translate(-50%, -50%);
+      top:50%;
+      left:50%;
+      overflow:hidden;
+      }
+    h1{
+      margin-top: 0px;
+      font-size: 20px;
+      }
+      h2{
+      font-size: 20px;
+      }
+      .form-container {
+        background-color: bisque;
+        display: none; /* Hidden by default */
+        position: absolute; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        width:200px;
+        height:250px;
+        padding:30px 18px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 #000;
+        margin:auto;
+        top:-100px;
+        left:-50px;
+        }
+        .user-img{
+        background: url('https://img.icons8.com/bubbles/2x/user-male.png') no-repeat;
+        width: 120px;
+        height: 120px;
+        background-size: 100%;
+        position:absolute;
+        top:-70px;
+        left: 60px;
+        }
+        ul.list{
+        list-style-type: none;
+        margin-left: -100px;
+        text-align:center;
+        }
+        ul.list li{
+        width:250px;
+        margin-left:35px;
+        margin-bottom: 25px;
+        }
+        ul.list li input{
+        width: 150px;
+        text-align: center;
+        padding: 8px 20px;
+        border:none;
+        background-color: white;
+        border-radius:5px;
+        }
+        ul.list li:nth-child(5){
+        color:red;
+        }
+        ul.list li input[type="submit"]{
+        width: auto;
+        text-align: center;
+        padding: 10px 25px;
+        border:none;
+        background-color: bisque;
+        border-radius:5px;
+        }
+        .close {
+        color: #aaaaaa;
+        float: left;
+        top: 12px;
+        left: 220px;
+        font-size: 28px;
+        font-weight: bold;
+        position:absolute;
+        transform: translate(-50%, -50%);
+        }
+        .close:hover,
+        .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+        }
+        #myBtn{
+        padding: 10px 20px;
+        background-color:  white;
+        border: none;
+        top:-300px;
+        font-weight: bold;
+        }
+        .error{
+          color: red;
+        }
   }
