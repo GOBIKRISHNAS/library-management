@@ -3,7 +3,7 @@ var user_name = localStorage.getItem("userName");
 var books_list = [
     {name: "Eating in the Age of Dieting", author: "Rujuta Diwekar", cost: "₹265.00", books_available: 2, img_url: "https://images-eu.ssl-images-amazon.com/images/I/31970VMFv5L._AC_SX184_.jpg", category: "Health, Family & Personal Development", description: "Rujuta Diwekar is amongst the most followed nutritionists globally, and a leading health advocate. Over the past decade, her writings have decisively shifted food conversations across the country away from fads and towards eating local, seasonal and traditional."},
     {name: "Novels of Sherlock Holmes", author: "Arthur Conan Doyle", cost: "₹149", books_available: 4, img_url: "https://images-eu.ssl-images-amazon.com/images/I/41tT5SJp6+L._AC_SX184_.jpg", category: "Arts, Film & Photography", description: "There’s the scarlet thread of murder running through the colourless skein of life and our duty is to unravel it and isolate it and expose every inch of it.”Sherlock Holmes Consulting Detective 221B Baker Street London."},
-    {name: "The Secret Garden", author: "Frances Hodgson Burnett", cost: "₹124.00", books_available: 5, img_url: "https://images-eu.ssl-images-amazon.com/images/I/51V-OwTiNVL._AC_SX184_.jpg", category: "Crafts, Hobbies & Practical Interests", description: "I am sure there is Magic in everything, only we have not sense enough to get hold of it and make it do things for us.” When Mary Lennox, the unloved, contrary and spoiled ten-year-old, is found alone in the deserted house after her parents’ death."},
+    {name: "The Secret Garden", author: "Frances Hodgson", cost: "₹124.00", books_available: 5, img_url: "https://images-eu.ssl-images-amazon.com/images/I/51V-OwTiNVL._AC_SX184_.jpg", category: "Crafts, Hobbies & Practical Interests", description: "I am sure there is Magic in everything, only we have not sense enough to get hold of it and make it do things for us.” When Mary Lennox, the unloved, contrary and spoiled ten-year-old, is found alone in the deserted house after her parents’ death."},
     {name: "Black 13 (Scott Pearce)", author: "Adam Hamdy", cost: "₹333.00", books_available: 7, img_url: "https://images-eu.ssl-images-amazon.com/images/I/419Y6Jy1OUL._AC_SX184_.jpg", category: "Literature & Fiction", description: "Black 13 is the brilliant first novel in the Scott Pearce series from Sunday Times bestselling author Adam Hamdy. In this addictive and fast-paced thriller, ex-MI6 officer Pearce is about to show us that in a world where there is no loyalty to the nation state, it’s time to burn the espionage rule book."},
     {name: "Such a Fun Age", author: "Kiley Reid", cost: "₹388", books_available: 3,img_url: "https://images-eu.ssl-images-amazon.com/images/I/51TEBoy4lnL._AC_SX184_.jpg", category: "Literature & Fiction", description: "A striking and surprising debut novel from an exhilarating new voice, Such a Fun Age is a page-turning and big-hearted story about race and privilege, set around a young black babysitter, her well-intentioned employer, and a surprising connection that threatens to undo them both."},
     {name: "Joe Biden: American Dreamer", author: "Evan Osnos", cost: "₹559", books_available: 2,img_url: "https://images-eu.ssl-images-amazon.com/images/I/414+86apq9L._AC_SX184_.jpg", category: "Region & Countries", description: "'Biden has overcome unimaginable tribulation, multiple presidential primary humiliations, a potentially crippling speech impediment and his own mediocrity. Now he carries the hopes of billions upon his shoulders' Sunday Times The new biography of President-elect Joe Biden by National Book Award winner."},
@@ -135,7 +135,34 @@ function booksborrowed() {
 }
 
 function popup(i){
-    index = i+1
+    
+    var x = window.matchMedia("(max-width: 700px)")
+    if (x.matches) { 
+          index = i+1
+          params = "ul li:nth-child(" +  index  + ")"
+    document.querySelectorAll(params)[0].style.height = "200px";
+    document.querySelectorAll(params)[0].style.textAlign = "justify";
+    
+    str = "<img src = '"+ books_list[i].img_url + "' alt='' width=180px id='pic'><div class='details'><h1>" + books_list[i].name + "</h1><p>" + books_list[i].author +"</p><p>" + books_list[i].cost + "</p><p>Books Available: " + books_list[i].books_available + "</p><p>Category: " + books_list[i].category + "</p><p>Description: " + books_list[i].description + "</p><button>Borrow</button><button class='close' onclick = 'span(" + index + ");'>Close</button></div>"
+    document.querySelectorAll(params)[0].innerHTML = str;
+
+    params_img = params + " img"
+    params_details = params + " .details"
+    params_button = params + " button"
+    params_para = params + " p"
+    params_header = params + " h1"
+    document.querySelectorAll(params_img)[0].style.width = "70px";
+    document.querySelectorAll(params_img)[0].style.height = "80px";
+    document.querySelectorAll(params_details)[0].style.fontSize = "6px";
+    document.querySelectorAll(params_details)[0].style.position = "absolute";
+    document.querySelectorAll(params_details)[0].style.marginRight = "10px";
+    document.querySelectorAll(params_details)[0].style.marginLeft = "5px";
+    document.querySelectorAll(params_button)[0].style.marginTop = "auto";
+    document.querySelectorAll(params_button)[0].style.marginLeft = "5px";
+    document.querySelectorAll(params_para)[0].style.marginTop = "10px";
+    document.querySelectorAll(params_header)[0].style.marginTop = "100px";
+      } else {
+       index = i+1
     params = "ul li:nth-child(" +  index  + ")"
     document.querySelectorAll(params)[0].style.width =  "695px";
     document.querySelectorAll(params)[0].style.height = "240px";
@@ -157,16 +184,28 @@ function popup(i){
     document.querySelectorAll(params_button)[0].style.marginLeft = "5px";
     document.querySelectorAll(params_para)[0].style.marginTop = "10px";
     document.querySelectorAll(params_header)[0].style.marginTop = "5px";
+      }
 }
 
 function span(i){
-    params = "ul li:nth-child(" +  i  + ")"
-    i = i-1;
-    console.log(books_list[i].img_url)
-    str = "<a href='javascript:void(0)' onclick='popup(" + i + ");'><img src = '"+ books_list[i].img_url + "' alt='' width=180px id='pic'><div class='details'><h1>" + books_list[i].name + "</h1><p>" + books_list[i].author +"</p><p>" + books_list[i].cost + "</p><p>Books Available: " + books_list[i].books_available + "</p><p hidden>" + books_list[i].category + "</p></div></a>";
-    document.querySelectorAll(params)[0].innerHTML = str;
-    document.querySelectorAll(params)[0].style.width =  "25%";
-    document.querySelectorAll(params)[0].style.height = "auto";
+    var x = window.matchMedia("(max-width: 700px)")
+    if(x.matches) { 
+        params = "ul li:nth-child(" +  i  + ")"
+        i = i-1;
+        console.log(books_list[i].img_url)
+        str = "<a href='javascript:void(0)' onclick='popup(" + i + ");'><img src = '"+ books_list[i].img_url + "' alt='' width=180px id='pic'><div class='details'><h1>" + books_list[i].name + "</h1><p>" + books_list[i].author +"</p><p>" + books_list[i].cost + "</p><p>Books Available: " + books_list[i].books_available + "</p><p hidden>" + books_list[i].category + "</p></div></a>";
+        document.querySelectorAll(params)[0].innerHTML = str;
+        document.querySelectorAll(params)[0].style.width =  "90%";
+        document.querySelectorAll(params)[0].style.height = "auto";
+    }else{
+        params = "ul li:nth-child(" +  i  + ")"
+        i = i-1;
+        console.log(books_list[i].img_url)
+        str = "<a href='javascript:void(0)' onclick='popup(" + i + ");'><img src = '"+ books_list[i].img_url + "' alt='' width=180px id='pic'><div class='details'><h1>" + books_list[i].name + "</h1><p>" + books_list[i].author +"</p><p>" + books_list[i].cost + "</p><p>Books Available: " + books_list[i].books_available + "</p><p hidden>" + books_list[i].category + "</p></div></a>";
+        document.querySelectorAll(params)[0].innerHTML = str;
+        document.querySelectorAll(params)[0].style.width =  "25%";
+        document.querySelectorAll(params)[0].style.height = "auto";
+    }
 }
 
 function myFunction() { 
