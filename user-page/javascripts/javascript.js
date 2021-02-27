@@ -140,7 +140,7 @@ function popup(i){
     if (x.matches) { 
           index = i+1
           params = "ul li:nth-child(" +  index  + ")"
-    document.querySelectorAll(params)[0].style.height = "200px";
+    document.querySelectorAll(params)[0].style.height = "220px";
     document.querySelectorAll(params)[0].style.textAlign = "justify";
     
     str = "<img src = '"+ books_list[i].img_url + "' alt='' width=180px id='pic'><div class='details'><h1>" + books_list[i].name + "</h1><p>" + books_list[i].author +"</p><p>" + books_list[i].cost + "</p><p>Books Available: " + books_list[i].books_available + "</p><p>Category: " + books_list[i].category + "</p><p>Description: " + books_list[i].description + "</p><button>Borrow</button><button class='close' onclick = 'span(" + index + ");'>Close</button></div>"

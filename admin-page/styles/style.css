@@ -337,7 +337,7 @@ form {
     width: 65px;
 }
 
-@media only screen and (max-width:400px) {
+@media only screen and (max-width:450px) {
     .side-bar{
         width:90px;
         height:100%;
@@ -454,7 +454,7 @@ form {
       }
       .book-details > button{
         font-size: 10px;
-        width: 80px;
+        width: 100px;
         height: 60px;
       }
     .book-details > button:nth-child(3){
@@ -465,7 +465,7 @@ form {
     .book-details > button:nth-child(4){
         position: absolute;
         top: 80px;
-        left: 110px;
+        left: 130px;
       }
       .graph{
         background-size: cover;
@@ -473,7 +473,7 @@ form {
         width:auto;
         height: 50px;
         top: 180px;
-        left: 45px;
+        left: 50px;
         padding: auto;
        }
    
@@ -483,7 +483,7 @@ form {
     width:auto;
     height: 60px;
     top: 175px;
-    left: 135px;
+    left: 165px;
     padding: auto;
           }
    .graph2{
@@ -492,7 +492,7 @@ form {
     width:auto;
     height: 60px;
     top: 240px;
-    left: 40px;
+    left: 45px;
     padding: auto;
           }
    
@@ -502,14 +502,14 @@ form {
     width:auto;
     height: 60px;
     top: 240px;
-    left: 135px;
+    left: 165px;
     padding: auto;
    }
    .quotes h2{
     width: 82%;
     text-align: center;
     margin-top:320px;
-    margin-left: 20px;
+    margin-left: 30px;
     font-size:10px;
    }
    .quotes h3{
@@ -563,7 +563,7 @@ form {
     position: absolute;
     font-size: 6px;
     color: black;
-    margin-left: 60px;
+    margin-left: 80px;
     margin-top: -16px;
     border-radius: 4px;
     background-color:  rgb(158, 158, 161);
