@@ -1,12 +1,12 @@
-import * as  object from "../constant.js"
+import * as  object from "../../constant.js"
 
 var user_name = localStorage.getItem("userName");
 var books_list = object.data.books_list
 var new_arrivals = object.data.new_arrivals
 var books_borrowed = object.data.books_borrowed
-console.log(books_borrowed)
-borrow_count = 0
-for(i=0;i<Object.values(books_borrowed).length;i++){
+var borrow_count = 0
+
+for(var i=0;i<Object.values(books_borrowed).length;i++){
     borrow_count = Object.values(books_borrowed)[i].length + borrow_count
 }
 
@@ -29,7 +29,6 @@ window.dashboard = function dashboard() {
     document.getElementById("newarrivals").style.display = "none";
     document.getElementById("booksborrowed").style.display = "none";
     document.getElementById("addbooks").style.display = "none";
-    document.getElementById("bookspopup").style.display = "none";
     var x = window.matchMedia("(max-width: 700px)")
     if(x.matches) { 
     document.getElementById("side-bar").style.display = "none";
@@ -38,7 +37,7 @@ window.dashboard = function dashboard() {
 
 window.availablebooks = function availablebooks() {
 
-    str=""
+    var str=""
 
     if (books_list.length>0){
         for (i = 0; i < books_list.length; i++) {
@@ -68,7 +67,7 @@ window.availablebooks = function availablebooks() {
 }
 window.newarrivals = function newarrivals() {
 
-    str=""
+    var str=""
 
     if (new_arrivals.length>0){
         for (i = 0; i < new_arrivals.length; i++) {
@@ -91,7 +90,6 @@ window.newarrivals = function newarrivals() {
     document.getElementById("newarrivals").style.display = "block";
     document.getElementById("booksborrowed").style.display = "none";
     document.getElementById("addbooks").style.display = "none";
-    document.getElementById("bookspopup").style.display = "none";
     var x = window.matchMedia("(max-width: 700px)")
     if(x.matches) { 
     document.getElementById("side-bar").style.display = "none";
@@ -99,19 +97,19 @@ window.newarrivals = function newarrivals() {
 }
 window.booksborrowed = function booksborrowed() {
     
-    str = ""
-    str3 = "<tr><td> S.No </td><td> User Name </td><td> Name of the Books</tr>"
+    var str = ""
+    var str3 = "<tr><td> S.No </td><td> User Name </td><td> Name of the Books</tr>"
     for(i=0;i<Object.keys(books_borrowed).length;i++){
-        key = Object.keys(books_borrowed)[i]
-        keys_value_length = books_borrowed[key].length
-        k = i+1;
-        str = "<tr><td>"+ k +"</td><td>" + key + "</td><td>"
-        str1 = ""
-        for(j=0;j<keys_value_length;j++){
-         l = j+1
+        var key = Object.keys(books_borrowed)[i]
+        var keys_value_length = books_borrowed[key].length
+        var k = i+1;
+        var str = "<tr><td>"+ k +"</td><td>" + key + "</td><td>"
+        var str1 = ""
+        for(var j=0;j<keys_value_length;j++){
+         var l = j+1
              str1 = str1 + "<p>" + books_borrowed[key][j].name + "</p>" 
         } 
-        str2 = str + str1 + "</td></tr>"
+        var str2 = str + str1 + "</td></tr>"
         str3 = str3 + str2
     }
     
@@ -127,7 +125,6 @@ window.booksborrowed = function booksborrowed() {
     document.getElementById("newarrivals").style.display = "none";
     document.getElementById("booksborrowed").style.display = "block";
     document.getElementById("addbooks").style.display = "none";
-    document.getElementById("bookspopup").style.display = "none";
     var x = window.matchMedia("(max-width: 700px)")
     if(x.matches) { 
     document.getElementById("side-bar").style.display = "none";
@@ -146,7 +143,6 @@ window.addbooks = function addbooks(){
     document.getElementById("newarrivals").style.display = "none";
     document.getElementById("booksborrowed").style.display = "none";
     document.getElementById("addbooks").style.display = "block";
-    document.getElementById("bookspopup").style.display = "none";
     var x = window.matchMedia("(max-width: 700px)")
     if(x.matches) { 
         document.getElementById("side-bar").style.display = "none";
@@ -157,8 +153,8 @@ window.popup = function popup(i){
     
     var x = window.matchMedia("(max-width: 700px)")
     if (x.matches) { 
-          index = i+1
-          params = "ul li:nth-child(" +  index  + ")"
+          var index = i+1
+          var params = "ul li:nth-child(" +  index  + ")"
     document.querySelectorAll(params)[0].style.height = "220px";
     document.querySelectorAll(params)[0].style.textAlign = "justify";
     
@@ -187,14 +183,14 @@ window.popup = function popup(i){
     document.querySelectorAll(params)[0].style.height = "240px";
     document.querySelectorAll(params)[0].style.textAlign = "justify";
     
-    str = "<img src = '"+ books_list[i].img_url + "' alt='' width=180px id='pic'><div class='details'><h1>" + books_list[i].name + "</h1><p>" + books_list[i].author +"</p><p>" + books_list[i].cost + "</p><p>Books Available: " + books_list[i].books_available + "</p><p>Category: " + books_list[i].category + "</p><p>Description: " + books_list[i].description + "</p><button>Remove</button><button class='close' onclick = 'span(" + index + ");'>Close</button></div>"
+    var str = "<img src = '"+ books_list[i].img_url + "' alt='' width=180px id='pic'><div class='details'><h1>" + books_list[i].name + "</h1><p>" + books_list[i].author +"</p><p>" + books_list[i].cost + "</p><p>Books Available: " + books_list[i].books_available + "</p><p>Category: " + books_list[i].category + "</p><p>Description: " + books_list[i].description + "</p><button>Remove</button><button class='close' onclick = 'span(" + index + ");'>Close</button></div>"
     document.querySelectorAll(params)[0].innerHTML = str;
 
-    params_img = params + " img"
-    params_details = params + " .details"
-    params_button = params + " button"
-    params_para = params + " p"
-    params_header = params + " h1"
+    var params_img = params + " img"
+    var params_details = params + " .details"
+    var params_button = params + " button"
+    var params_para = params + " p"
+    var params_header = params + " h1"
     document.querySelectorAll(params_img)[0].style.width = "120px";
     document.querySelectorAll(params_img)[0].style.height = "230px";
     document.querySelectorAll(params_details)[0].style.fontSize = "13px";
@@ -209,17 +205,15 @@ window.popup = function popup(i){
 window.span = function span(i){
     var x = window.matchMedia("(max-width: 700px)")
     if(x.matches) { 
-        params = "ul li:nth-child(" +  i  + ")"
+        var params = "ul li:nth-child(" +  i  + ")"
         i = i-1;
-        console.log(books_list[i].img_url)
-        str = "<a href='javascript:void(0)' onclick='popup(" + i + ");'><img src = '"+ books_list[i].img_url + "' alt='' width=180px id='pic'><div class='details'><h1>" + books_list[i].name + "</h1><p>" + books_list[i].author +"</p><p>" + books_list[i].cost + "</p><p>Books Available: " + books_list[i].books_available + "</p><p hidden>" + books_list[i].category + "</p></div></a>";
+        var str = "<a href='javascript:void(0)' onclick='popup(" + i + ");'><img src = '"+ books_list[i].img_url + "' alt='' width=180px id='pic'><div class='details'><h1>" + books_list[i].name + "</h1><p>" + books_list[i].author +"</p><p>" + books_list[i].cost + "</p><p>Books Available: " + books_list[i].books_available + "</p><p hidden>" + books_list[i].category + "</p></div></a>";
         document.querySelectorAll(params)[0].innerHTML = str;
         document.querySelectorAll(params)[0].style.width =  "90%";
         document.querySelectorAll(params)[0].style.height = "auto";
     }else{
         params = "ul li:nth-child(" +  i  + ")"
         i = i-1;
-        console.log(books_list[i].img_url)
         str = "<a href='javascript:void(0)' onclick='popup(" + i + ");'><img src = '"+ books_list[i].img_url + "' alt='' width=180px id='pic'><div class='details'><h1>" + books_list[i].name + "</h1><p>" + books_list[i].author +"</p><p>" + books_list[i].cost + "</p><p>Books Available: " + books_list[i].books_available + "</p><p hidden>" + books_list[i].category + "</p></div></a>";
         document.querySelectorAll(params)[0].innerHTML = str;
         document.querySelectorAll(params)[0].style.width =  "25%";
