@@ -1,4 +1,6 @@
-var login_credentials = data.login_credentials
+import * as  object from "../constant.js"
+
+var login_credentials = object.data.login_credentials
 
 var form = document.getElementById("form");
 
@@ -14,7 +16,7 @@ span.onclick = function() {
     form.style.display = "none";
 }
 
-function validationForm() {
+window.validationForm =  function validationForm() {
     var userName = document.getElementsByName("User Name")[0].value;
     var password = document.getElementsByName("Password")[0].value;
     
@@ -26,7 +28,7 @@ function validationForm() {
     }
 }
 
-function directPage() {
+window.directPage = function directPage() {
     var userName = document.getElementsByName("User Name")[0].value;
     var password = document.getElementsByName("Password")[0].value;
     var obj = login_credentials.find(o => o.username === userName);

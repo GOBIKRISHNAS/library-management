@@ -1,8 +1,10 @@
-var user_name = localStorage.getItem("userName");
-var books_list = data.books_list
-var new_arrivals = data.new_arrivals
-var books_borrowed = data.books_borrowed
+import * as  object from "../constant.js"
 
+var user_name = localStorage.getItem("userName");
+var books_list = object.data.books_list
+var new_arrivals = object.data.new_arrivals
+var books_borrowed = object.data.books_borrowed
+console.log(books_borrowed)
 borrow_count = 0
 for(i=0;i<Object.values(books_borrowed).length;i++){
     borrow_count = Object.values(books_borrowed)[i].length + borrow_count
@@ -14,8 +16,7 @@ document.getElementById("books-available").innerHTML = books_list.length;
 document.getElementById("books-borrowed").innerHTML = borrow_count;
 document.getElementById("total-users").innerHTML = Object.keys(books_borrowed).length;
 
-
-function dashboard() {
+window.dashboard = function dashboard() {
 
     var current = document.getElementsByClassName("active");
     current[0].className = current[0].className.replace(" active", "");
@@ -35,7 +36,7 @@ function dashboard() {
     }
 }
 
-function availablebooks() {
+window.availablebooks = function availablebooks() {
 
     str=""
 
@@ -65,7 +66,7 @@ function availablebooks() {
     document.getElementById("side-bar").style.display = "none";
     }
 }
-function newarrivals() {
+window.newarrivals = function newarrivals() {
 
     str=""
 
@@ -96,7 +97,7 @@ function newarrivals() {
     document.getElementById("side-bar").style.display = "none";
     }
 }
-function booksborrowed() {
+window.booksborrowed = function booksborrowed() {
     
     str = ""
     str3 = "<tr><td> S.No </td><td> User Name </td><td> Name of the Books</tr>"
@@ -133,7 +134,7 @@ function booksborrowed() {
     }
 }
 
-function addbooks(){
+window.addbooks = function addbooks(){
     var current = document.getElementsByClassName("active");
     current[0].className = current[0].className.replace(" active", "");
     
@@ -152,7 +153,7 @@ function addbooks(){
     }
 }
 
-function popup(i){
+window.popup = function popup(i){
     
     var x = window.matchMedia("(max-width: 700px)")
     if (x.matches) { 
@@ -205,7 +206,7 @@ function popup(i){
       }
 }
 
-function span(i){
+window.span = function span(i){
     var x = window.matchMedia("(max-width: 700px)")
     if(x.matches) { 
         params = "ul li:nth-child(" +  i  + ")"
@@ -225,17 +226,17 @@ function span(i){
         document.querySelectorAll(params)[0].style.height = "auto";
     }
 }
-function menuClick(){
+window.menuClick = function menuClick(){
     document.getElementById("side-bar").style.display = "block";
 }
 
-function closeSide(){
+window.closeSide = function closeSide(){
     var x = window.matchMedia("(max-width: 700px)")
     if(x.matches) { 
     document.getElementById("side-bar").style.display = "none";
     }
 }
-function myFunction() { 
+window.myFunction = function myFunction() { 
     
     document.getElementById("bookspopup").style.display = "none";
     var input, filter, ul, li, a, i, txtValue;
@@ -254,7 +255,7 @@ function myFunction() {
     }
 }
 
-function exportTableToExcel(tableID, filename = ''){
+window.exportTableToExcel = function exportTableToExcel(tableID, filename = ''){
     var downloadLink;
     var dataType = 'application/vnd.ms-excel';
     var tableSelect = document.getElementById(tableID);

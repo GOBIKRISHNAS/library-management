@@ -1,4 +1,4 @@
-const data = {
+export const data = {
    "login_credentials":[
       {
          "username":"krishna",
