@@ -1,7 +1,7 @@
 var user_name = localStorage.getItem("userName");
 var books_list = data.books_list
 var new_arrivals = data.new_arrivals
-var books_borrowed = data.booksborrowed
+var books_borrowed = data.books_borrowed
 
 borrow_count = 0
 for(i=0;i<Object.values(books_borrowed).length;i++){
