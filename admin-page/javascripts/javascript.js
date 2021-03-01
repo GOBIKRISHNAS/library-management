@@ -58,6 +58,10 @@ function dashboard() {
     document.getElementById("booksborrowed").style.display = "none";
     document.getElementById("addbooks").style.display = "none";
     document.getElementById("bookspopup").style.display = "none";
+    var x = window.matchMedia("(max-width: 700px)")
+    if(x.matches) { 
+    document.getElementById("side-bar").style.display = "none";
+    }
 }
 
 function availablebooks() {
@@ -85,6 +89,10 @@ function availablebooks() {
     document.getElementById("newarrivals").style.display = "none";
     document.getElementById("booksborrowed").style.display = "none";
     document.getElementById("addbooks").style.display = "none";
+    var x = window.matchMedia("(max-width: 700px)")
+    if(x.matches) { 
+    document.getElementById("side-bar").style.display = "none";
+    }
 }
 function newarrivals() {
 
@@ -112,6 +120,10 @@ function newarrivals() {
     document.getElementById("booksborrowed").style.display = "none";
     document.getElementById("addbooks").style.display = "none";
     document.getElementById("bookspopup").style.display = "none";
+    var x = window.matchMedia("(max-width: 700px)")
+    if(x.matches) { 
+    document.getElementById("side-bar").style.display = "none";
+    }
 }
 function booksborrowed() {
     
@@ -144,6 +156,10 @@ function booksborrowed() {
     document.getElementById("booksborrowed").style.display = "block";
     document.getElementById("addbooks").style.display = "none";
     document.getElementById("bookspopup").style.display = "none";
+    var x = window.matchMedia("(max-width: 700px)")
+    if(x.matches) { 
+    document.getElementById("side-bar").style.display = "none";
+    }
 }
 
 function addbooks(){
@@ -159,6 +175,10 @@ function addbooks(){
     document.getElementById("booksborrowed").style.display = "none";
     document.getElementById("addbooks").style.display = "block";
     document.getElementById("bookspopup").style.display = "none";
+    var x = window.matchMedia("(max-width: 700px)")
+    if(x.matches) { 
+        document.getElementById("side-bar").style.display = "none";
+    }
 }
 
 function popup(i){
@@ -234,7 +254,16 @@ function span(i){
         document.querySelectorAll(params)[0].style.height = "auto";
     }
 }
+function menuClick(){
+    document.getElementById("side-bar").style.display = "block";
+}
 
+function closeSide(){
+    var x = window.matchMedia("(max-width: 700px)")
+    if(x.matches) { 
+    document.getElementById("side-bar").style.display = "none";
+    }
+}
 function myFunction() { 
     
     document.getElementById("bookspopup").style.display = "none";

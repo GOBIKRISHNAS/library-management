@@ -316,13 +316,32 @@ hr{
 }
 @media only screen and (max-width:450px) {
     .side-bar{
+        display: none;
         width:90px;
         height:100%;
         margin: auto;
-        position: fixed;
+        position: absolute;
         top: 0px;
         left: 0px;
         background-color: rgb(62, 62, 112);
+        z-index: 1;
+    }
+    .menu-icon {
+        display: inline-block;
+        cursor: pointer;
+      }
+      
+      .bar1, .bar2, .bar3 {
+        width: 15px;
+        height: 3px;
+        background-color: #333;
+        margin: 3px 0;
+        transition: 0.4s;
+      }
+    .menu-text{
+        float: right;
+        margin-left: 20px;
+        margin-top: 2px;
     }
     .user-name{
         font-family: Calibri, Helvetica, sans-serif; 
@@ -366,15 +385,23 @@ hr{
     .options-list a:link{
         text-decoration: none;
     }
+    .side-close button{
+        display: inline-block;
+        color: white;
+        background:  rgb(62, 62, 112);
+        border: white;
+        margin-left:89px;
+        z-index: 1;
+    }
     .dashboard{
         width:70%;
         height:100%;
-        top:0px;
-        left:90px;
+        top:40px;
+        left:0px;
         margin: auto;
-        position: fixed;
+        position: absolute;
         background: white;
-        z-index: 1;
+        z-index: -1;
     }
     .availablebooks{
         display: none;
@@ -385,7 +412,7 @@ hr{
         margin: auto;
         position: absolute;
         background: white;
-        z-index: 1;
+        z-index: -1;
     }
     .newarrivals{
         display: none;
@@ -396,7 +423,7 @@ hr{
         margin: auto;
         position: absolute;
         background: white;
-        z-index: 1;
+        z-index: -1;
     }
     .booksborrowed{
         display: none;
@@ -407,20 +434,20 @@ hr{
         margin: auto;
         position: absolute;
         background: white;
-        z-index: 1;
+        z-index: -1;
     }
     .book-details {
         display: grid;
         position: absolute;
-        width:25%;
+        width:35%;
         top: 20px;
-        left:  15px;
+        left:  45px;
         grid-column-gap: 20px;
         grid-row-gap: 10px;
       }
       .book-details > button{
         font-size: 10px;
-        width: 100px;
+        width: 120px;
         height: 60px;
       }
     .book-details > button:nth-child(3){
@@ -431,34 +458,34 @@ hr{
     .book-details > button:nth-child(4){
         position: absolute;
         top: 80px;
-        left: 130px;
+        left: 150px;
       }
       .graph{
         background-size: cover;
         position: absolute;
-        width:auto;
-        height: 50px;
+        width:70px;
+        height: 65px;
         top: 180px;
-        left: 50px;
+        left: 90px;
         padding: auto;
        }
    
    .graph1{
     background-size: cover;
     position: absolute;
-    width:auto;
-    height: 60px;
+    width:70px;
+    height: 75px;
     top: 175px;
-    left: 165px;
+    left: 225px;
     padding: auto;
           }
    .graph2{
     background-size: cover;
     position: absolute;
     width:auto;
-    height: 60px;
-    top: 240px;
-    left: 45px;
+    height: 70px;
+    top: 260px;
+    left: 95px;
     padding: auto;
           }
    
@@ -466,22 +493,23 @@ hr{
     background-size: cover;
     position: absolute;
     width:auto;
-    height: 60px;
-    top: 240px;
-    left: 165px;
+    height: 70px;
+    top: 260px;
+    left: 225px;
     padding: auto;
    }
    .quotes h2{
-    width: 82%;
+    width: 100%;
     text-align: center;
-    margin-top:320px;
-    margin-left: 30px;
+    margin-top:350px;
+    margin-left: 60px;
     font-size:10px;
    }
    .quotes h3{
-    width: auto;
+    width: 100%;
     text-align: center;
     margin: auto;
+    margin-left: 150px;
     font-size:10px;
     color: black;
    }
@@ -491,11 +519,11 @@ hr{
     padding: 4px;
     border: 2px solid #ddd;
     margin-top: 10px;
-    margin-left: 10px;
+    margin-left: 0px;
     margin-bottom: -100px;
   }
   #wrapper ul {
-    margin-top: -30px;
+    margin-top: 0px;
     padding: auto;
     width: 100%;
     list-style-type: none;
@@ -507,7 +535,7 @@ hr{
     display: table;
     width: 90%;
     float: left;
-    margin-left: 5px;
+    margin-left: -30px;
 }
 #wrapper ul li img {
     margin-top: 0px;

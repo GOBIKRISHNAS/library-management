@@ -54,6 +54,10 @@ function dashboard() {
     document.getElementById("newarrivals").style.display = "none";
     document.getElementById("booksborrowed").style.display = "none";
     document.getElementById("bookspopup").style.display = "none";
+    var x = window.matchMedia("(max-width: 700px)")
+    if(x.matches) { 
+    document.getElementById("side-bar").style.display = "none";
+    }
 }
 
 function availablebooks() {
@@ -80,6 +84,10 @@ function availablebooks() {
     document.getElementById("newarrivals").style.display = "none";
     document.getElementById("booksborrowed").style.display = "none";
     document.getElementById("bookspopup").style.display = "none";
+    var x = window.matchMedia("(max-width: 700px)")
+    if(x.matches) { 
+    document.getElementById("side-bar").style.display = "none";
+    }
 }
 function newarrivals() {
 
@@ -105,6 +113,10 @@ function newarrivals() {
     document.getElementById("newarrivals").style.display = "block";
     document.getElementById("booksborrowed").style.display = "none";
     document.getElementById("bookspopup").style.display = "none";
+    var x = window.matchMedia("(max-width: 700px)")
+    if(x.matches) { 
+    document.getElementById("side-bar").style.display = "none";
+    }
 }
 function booksborrowed() {
     
@@ -132,6 +144,10 @@ function booksborrowed() {
     document.getElementById("booksborrowed").style.display = "block";
     document.getElementById("searchtab").style.display = "none";
     document.getElementById("bookspopup").style.display = "none";
+    var x = window.matchMedia("(max-width: 700px)")
+    if(x.matches) { 
+    document.getElementById("side-bar").style.display = "none";
+    }
 }
 
 function popup(i){
@@ -208,6 +224,10 @@ function span(i){
     }
 }
 
+function menuClick(){
+    document.getElementById("side-bar").style.display = "block";
+}
+
 function myFunction() { 
    
     document.getElementById("bookspopup").style.display = "none";
@@ -224,5 +244,12 @@ function myFunction() {
         } else {
             li[i].style.display = "none";
         }
+    }
+}
+
+function closeSide(){
+    var x = window.matchMedia("(max-width: 700px)")
+    if(x.matches) { 
+    document.getElementById("side-bar").style.display = "none";
     }
 }

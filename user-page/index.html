@@ -8,9 +8,17 @@
       <title>Home Page</title>
    </head>
    <body>
-      <div class="side-bar">
+      <div class="menu-icon" onclick="menuClick()" >
+            <div class="menu-text">Menu</div>
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>  
+          </div>
+      </div>
+      <div id= "side-bar" class="side-bar">
          <div class="user-img"></div>
          <div class="user-name"></div>
+         <span class="side-close"><button onclick= "closeSide();">&times;</button></span>
          <div class="options-list">
             <li><button class="tabslink active" id="dashbtn" onclick= "dashboard();">Dashboard</button></li>
             <li><button class="tabslink" id="abooksbtn" onclick= "availablebooks();">Available Books</button></li>

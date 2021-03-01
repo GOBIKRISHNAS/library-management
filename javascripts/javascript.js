@@ -1,8 +1,6 @@
-var login_credentials = [
-    {username: "krishna", password: "123456"},
-    {username: "abirami", password: "098765"},
-    {username: "admin", password: "admin"}
-];
+import {data} from '../constant.js';
+
+var login_credentials = data.login_credentials
 
 var form = document.getElementById("form");
 
