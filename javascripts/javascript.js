@@ -1,5 +1,3 @@
-import {data} from '../constant.js';
-
 var login_credentials = data.login_credentials
 
 var form = document.getElementById("form");
