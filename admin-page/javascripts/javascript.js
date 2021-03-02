@@ -255,7 +255,18 @@ function closeSide(){
 }
 function myFunction() { 
     
-    document.getElementById("bookspopup").style.display = "none";
+    if(document.getElementById("myInput").value != ""){
+    var str=""
+
+    if (books_list.length>0){
+        for (i = 0; i < books_list.length; i++) {
+            str = str + "<li><a href='javascript:void(0)' onclick='popup(" + i + ");'><img src = '"+ books_list[i].img_url + "' alt='' width=180px id='pic'><div class='details'><h1>" + books_list[i].name + "</h1><p>" + books_list[i].author +"</p><p>" + books_list[i].cost + "</p><p>Books Available: " + books_list[i].books_available + "</p><p hidden>" + books_list[i].category + "</p></div></a></li>"
+        } 
+    }
+    else{
+        str = "NO Books Available"
+    }
+    document.getElementById("content1").innerHTML = str
     var input, filter, ul, li, a, i, txtValue;
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
@@ -270,6 +281,10 @@ function myFunction() {
             li[i].style.display = "none";
         }
     }
+}else{
+    availablebooks();
+}
+   
 }
 
 function exportTableToExcel(tableID, filename = ''){
