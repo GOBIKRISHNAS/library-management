@@ -1,4 +1,4 @@
-export const data = {
+define({
    "login_credentials":[
       {
          "username":"krishna",
@@ -188,4 +188,4 @@ export const data = {
          }
       ]
    }
-}
+});
