@@ -479,7 +479,7 @@ const data = {
          "category": "General Books",
          "description": "Jim Kay’s dazzling depiction of J.K. Rowling’s wizarding world has won legions of fans since the first Illustrated Edition of the Harry Potter novels was published in hardback in 2015, becoming a bestseller around the world."
       },{
-         "name": "Why Not Me₹ ",
+         "name": "Why Not Me",
          "author": "Agrawal Anubhav",
          "cost": "₹ 123.00",
          "img_url": "https://images-eu.ssl-images-amazon.com/images/I/51ka6kZlAIL._AC_SX184_.jpg",

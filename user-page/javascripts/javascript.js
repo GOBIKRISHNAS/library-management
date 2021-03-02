@@ -35,20 +35,40 @@ function availablebooks() {
     str=""
 
     if (books_list.length>0){
-        for (i = 0; i < books_list.length; i++) {
+        for (i = 0; i < books_list.length && i<12; i++) {
             str = str + "<li><a href='javascript:void(0)' onclick='popup(" + i + ");'><img src = '"+ books_list[i].img_url + "' alt='' width=180px id='pic'><div class='details'><h1>" + books_list[i].name + "</h1><p>" + books_list[i].author +"</p><p>" + books_list[i].cost + "</p><p>Books Available: " + books_list[i].books_available + "</p><p hidden>" + books_list[i].category + "</p></div></a></li>"
         } 
     }
     else{
         str = "NO Books Available"
     }
+
+    var index;
+    var counter = 12;
+    document.getElementById("content1").innerHTML = str
+    $(window).scroll(function () {  
+        if ($(window).scrollTop() == $(document).height() - $(window).height()) { 
+            if(counter<books_list.length){ 
+                counter = appendData(counter+1);  
+            } 
+        }  
+    });  
+    function appendData(counter) {  
+        var html = '';  
+        for (i = counter; i < books_list.length && i< counter+12; i++) {  
+            html = html + "<li><a href='javascript:void(0)' onclick='popup(" + i + ");'><img src = '"+ books_list[i].img_url + "' alt='' width=180px id='pic'><div class='details'><h1>" + books_list[i].name + "</h1><p>" + books_list[i].author +"</p><p>" + books_list[i].cost + "</p><p>Books Available: " + books_list[i].books_available + "</p><p hidden>" + books_list[i].category + "</p></div></a></li>"
+            index = i;
+        }  
+        $('#content1').append(html);  
+        return index
+    } 
+
     var current = document.getElementsByClassName("active");
     current[0].className = current[0].className.replace(" active", "");
     
     var tabsin = document.getElementsByClassName("tabslink")
     tabsin[1].className = tabsin[2].className.replace("tabslink", "tabslink active");
     
-    document.getElementById("content1").innerHTML = str
     document.getElementById("dashboard").style.display = "none";
     document.getElementById("availablebooks").style.display = "block";
     document.getElementById("newarrivals").style.display = "none";
