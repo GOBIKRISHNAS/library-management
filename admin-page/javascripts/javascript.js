@@ -15,13 +15,12 @@ document.getElementById("books-borrowed").innerHTML = borrow_count;
 document.getElementById("total-users").innerHTML = Object.keys(books_borrowed).length;
 
 
-function dashboard() {
+function dashboard(obj) {
 
     var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
+    current[0].classList.remove("active");
     
-    var tabsin = document.getElementsByClassName("tabslink")
-    tabsin[0].className = tabsin[2].className.replace("tabslink", "tabslink active");
+    obj.classList.add("active");
 
     document.getElementById("dashboard").style.display = "block";
     document.getElementById("availablebooks").style.display = "none";
@@ -35,31 +34,36 @@ function dashboard() {
     }
 }
 
-function availablebooks() {
-
+function availablebooks(obj) {
+    
+    var source   = document.getElementById('text-template').innerHTML;
+    var template = Handlebars.compile(source);
     str=""
 
     if (books_list.length>0){
         for (i = 0; i < books_list.length && i<21; i++) {
-            str = str + "<li><a href='javascript:void(0)' onclick='popup(" + i + ");'><img src = '"+ books_list[i].img_url + "' alt='' width=180px id='pic'><div class='details'><h1>" + books_list[i].name + "</h1><p>" + books_list[i].author +"</p><p>" + books_list[i].cost + "</p><p>Books Available: " + books_list[i].books_available + "</p><p hidden>" + books_list[i].category + "</p></div></a></li>"
+            func = "popup("+ i +");"
+            var context = {function_call: func, img_url: books_list[i].img_url, name: books_list[i].name, author: books_list[i].author, cost: books_list[i].cost, books_available: books_list[i].books_available};
+            var html    = template(context);
+            str = str + html
         } 
     }
     else{
         str = "NO Books Available"
     }
     var index;
-    var counter = 21;
+    var counter = 20;
     document.getElementById("content1").innerHTML = str
     $(window).scroll(function () {  
         if ($(window).scrollTop() == $(document).height() - $(window).height()) { 
             if(counter<books_list.length){ 
-                counter = appendData(counter+1);  
+                counter = appendData(counter);  
             } 
         }  
     });  
     function appendData(counter) {  
         var html = '';  
-        for (i = counter; i < books_list.length && i< counter+21; i++) {  
+        for (i = counter+1; i < books_list.length && i< counter+20; i++) {  
             html = html + "<li><a href='javascript:void(0)' onclick='popup(" + i + ");'><img src = '"+ books_list[i].img_url + "' alt='' width=180px id='pic'><div class='details'><h1>" + books_list[i].name + "</h1><p>" + books_list[i].author +"</p><p>" + books_list[i].cost + "</p><p>Books Available: " + books_list[i].books_available + "</p><p hidden>" + books_list[i].category + "</p></div></a></li>"
             index = i;
         }  
@@ -68,10 +72,9 @@ function availablebooks() {
     } 
     
     var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
+    current[0].classList.remove("active");
     
-    var tabsin = document.getElementsByClassName("tabslink")
-    tabsin[1].className = tabsin[2].className.replace("tabslink", "tabslink active");
+    obj.classList.add("active");
     
     document.getElementById("dashboard").style.display = "none";
     document.getElementById("availablebooks").style.display = "block";
@@ -83,13 +86,24 @@ function availablebooks() {
     document.getElementById("side-bar").style.display = "none";
     }
 }
-function newarrivals() {
-
+function newarrivals(obj) {
+    
+    var source   = document.getElementById('text-template').innerHTML;
+    var template = Handlebars.compile(source);
     str=""
 
     if (new_arrivals.length>0){
         for (i = 0; i < new_arrivals.length; i++) {
-            str = str + "<li><a href='#'><img src = '"+ new_arrivals[i].img_url + "' alt='' width=180px id='pic'><div class='details'><h1>" + new_arrivals[i].name + "</h1><p>" + new_arrivals[i].author +"</p><p>" + new_arrivals[i].cost + "</p><p>Books Available: " + new_arrivals[i].books_available + "</p><button>Remove</button></div></a></li>"
+            func = "popup("+ i +");"
+            var context = {
+                function_call: func, 
+                img_url: new_arrivals[i].img_url, 
+                name: new_arrivals[i].name, 
+                author: new_arrivals[i].author, 
+                cost: new_arrivals[i].cost, 
+                books_available: new_arrivals[i].books_available};
+            var html    = template(context);
+            str = str + html
         } 
     }
     else{
@@ -97,10 +111,9 @@ function newarrivals() {
     }
      
     var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
+    current[0].classList.remove("active");
     
-    var tabsin = document.getElementsByClassName("tabslink")
-    tabsin[2].className = tabsin[2].className.replace("tabslink", "tabslink active");
+    obj.classList.add("active");
 
     document.getElementById("content2").innerHTML = str
     document.getElementById("dashboard").style.display = "none";
@@ -114,7 +127,7 @@ function newarrivals() {
     document.getElementById("side-bar").style.display = "none";
     }
 }
-function booksborrowed() {
+function booksborrowed(obj) {
     
     str = ""
     str3 = "<tr><td> S.No </td><td> User Name </td><td> Name of the Books</tr>"
@@ -133,10 +146,11 @@ function booksborrowed() {
     }
     
     var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
+    current[0].classList.remove("active");
+    // current[0].className = current[0].className.substr(0,8);
     
-    var tabsin = document.getElementsByClassName("tabslink")
-    tabsin[3].className = tabsin[2].className.replace("tabslink", "tabslink active");
+    obj.classList.add("active");
+    // tabsin[3].className = tabsin[2].className.concat(" active");
 
     document.getElementById("content3").innerHTML = str3 ;
     document.getElementById("dashboard").style.display = "none";
@@ -151,12 +165,11 @@ function booksborrowed() {
     }
 }
 
-function addbooks(){
+function addbooks(obj){
     var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
+    current[0].classList.remove("active");
     
-    var tabsin = document.getElementsByClassName("tabslink")
-    tabsin[4].className = tabsin[2].className.replace("tabslink", "tabslink active");
+    obj.classList.add("active");
 
     document.getElementById("dashboard").style.display = "none";
     document.getElementById("availablebooks").style.display = "none";

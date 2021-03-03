@@ -206,8 +206,8 @@ hr{
 #wrapper ul li img {
     margin-left: 20px;
     float: left;
-    width: 50px;
-    height: 90px;
+    width: 4vw;
+    height: 6vw;
     left: 10px;
 }
 #wrapper ul li .details {
@@ -215,7 +215,7 @@ hr{
     width: 75%;
     margin-bottom : 0px;
     margin-top : -10px;
-    font-size: 10px;
+    font-size: 0.6vw;
 }
 #wrapper ul li .details button{
     position: absolute;
@@ -330,7 +330,7 @@ form {
     position: absolute;
     font-size: 15px;
     color: black;
-    margin-left: 70px;;
+    margin-left: 80px;;
     margin-top: auto;
     border-radius: 4px;
     background-color: rgb(158, 158, 161);

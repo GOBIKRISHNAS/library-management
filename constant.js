@@ -339,7 +339,7 @@ const data = {
          "category": "Personal Development & Self-Help Books",
          "description": "This book is brimming with memory, word and number workouts, codes, battleships and mind-bending spot the differences, as well as Japanese puzzles including hanjie, kakuro, futoshiki, sudoku and lots more. "
       },{
-         "name": "Who Will Cry When You Die₹",
+         "name": "Who Will Cry When You Die",
          "author": "Robin Sharma",
          "cost": "₹ 134.00",
          "img_url": "https://images-eu.ssl-images-amazon.com/images/I/41wKll7ITyL._AC_SX184_.jpg",

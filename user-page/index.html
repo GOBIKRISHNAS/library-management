@@ -20,10 +20,10 @@
          <div class="user-name"></div>
          <span class="side-close"><button onclick= "closeSide();">&times;</button></span>
          <div class="options-list">
-            <li><button class="tabslink active" id="dashbtn" onclick= "dashboard();">Dashboard</button></li>
-            <li><button class="tabslink" id="abooksbtn" onclick= "availablebooks();">Available Books</button></li>
-            <li><button class="tabslink" id="nbooksbtn" onclick = "newarrivals();">New Arrivals</button></li>
-            <li><button class="tabslink" id="bbooksbtn" onclick = "booksborrowed();">Books Borrowed</button></li>
+            <li><button class="tabslink active" id="dashbtn" onclick= "dashboard(this);">Dashboard</button></li>
+            <li><button class="tabslink" id="abooksbtn" onclick= "availablebooks(this);">Available Books</button></li>
+            <li><button class="tabslink" id="nbooksbtn" onclick = "newarrivals(this);">New Arrivals</button></li>
+            <li><button class="tabslink" id="bbooksbtn" onclick = "booksborrowed(this);">Books Borrowed</button></li>
             <li><button class="tabslink"><a href= "https://gobikrishnas.github.io/library-management/">Logout</a></button></li>
          </div>
       </div>
@@ -72,6 +72,21 @@
       </div>
       <script src="../constant.js"></script>
       <script src="../jquery.js"></script>
+      <script src="../handlebars.js"></script>
       <script src="javascripts/javascript.js"></script>
+      <script id="text-template" type="text/x-handlebars-template">
+         <li>
+            <a href='javascript:void(0)' onclick={{function_call}}>
+               <img src = {{img_url}} alt='' width=180px id='pic'>
+               <div class='details'>
+                  <h1>{{name}}</h1>
+                  <p>{{author}}</p>
+                  <p>Cost: {{cost}}</p>
+                  <p>Books Available: {{books_available}}</p>
+                  <p hidden>{{category}}</p>
+               </div>
+            </a>
+         </li>
+       </script>
    </body>
 </html>
