@@ -47,9 +47,6 @@
       </div>
       <div id= "availablebooks" class="availablebooks">
          <input type="text" name ="search" class="searchTerm" id="myInput" onkeyup="myFunction()" placeholder="Search for books by name or author or category..." title="Type in a name">
-         <div id="bookspopup" class="bookspopup">
-            <ul id="content4"></ul>
-         </div>
          <div id="wrapper">
           <section>
             <ul id="content1"></ul>
@@ -67,6 +64,14 @@
          <div id="wrapper">
             <section>
                 <ul id="content3"></ul>
+              </section>
+          </div>
+      </div>
+      <div id = "bookspopup" class="bookspopup">
+         <span class="close">&times;</span>
+         <div id="wrapper">
+            <section>
+                <ul id="popup"></ul>
               </section>
           </div>
       </div>

@@ -20,7 +20,55 @@ body {
     background: white;
     z-index: 1;
 }
-
+.bookspopup{
+    position: fixed;
+    background-color: bisque;
+    display: none; 
+    position: fixed;
+    z-index: 1; 
+    width:800px;
+    height:350px;
+    padding:40px 38px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 #000;
+    transform: translate(-50%, -50%);
+    top:50%;
+    left:50%;
+}
+.close {
+    color: #aaaaaa;
+    float: left;
+    top: 14px;
+    left: 860px;
+    font-size: 35px;
+    font-weight: bold;
+    position:absolute;
+    transform: translate(-50%, -50%);
+    }
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    }
+#popup img{
+    margin-top: -30px;
+}
+#popup .details {
+    float: right;
+    width: 75%;
+    margin-bottom : 0px;
+    margin-top : -50px;
+    font-size: 16px;
+    text-align: justify;
+}
+#popup .details button{
+    position: fixed;
+    font-size: 15px;
+    color: black;
+    border-radius: 4px;
+    background-color:  rgb(158, 158, 161);
+}
 .availablebooks{
     display: none;
     width:100%;
@@ -53,38 +101,6 @@ body {
     position: absolute;
     background: white;
     z-index: 1;
-}
-.bookspopup{
-    display: none;
-    width:78%;
-    height:320px;
-    top:60px;
-    left:30px;
-    margin: auto;
-    position: absolute;
-    background: lightseagreen;
-    z-index: 1;
-}
-.bookspopup img{
-    margin-top: 0px;
-    margin-left: 0px;
-}
-#bookspopup ul .details {
-    float: right;
-    width: 75%;
-    text-align: justify;
-    margin-bottom : 0px;
-    margin-top : -10px;
-    margin-right: 20px;
-    font-size: 14px;
-}
-#bookspopup ul .details button{
-    position: absolute;
-    font-size: 15px;
-    color: black;
-    margin-top: auto;
-    border-radius: 4px;
-    background-color: rgb(247, 68, 68);
 }
 .searchtab{
     display: none;
@@ -402,6 +418,56 @@ hr{
         position: absolute;
         background: white;
         z-index: -1;
+    }
+    .bookspopup{
+        position: fixed;
+        background-color: bisque;
+        display: none; 
+        position: fixed;
+        z-index: 1; 
+        width:180px;
+        height:300px;
+        padding:40px 38px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 #000;
+        transform: translate(-50%, -50%);
+        top:35%;
+        left:50%;
+    }
+    .close {
+        color: #aaaaaa;
+        float: left;
+        top: 14px;
+        left: 240px;
+        font-size: 25px;
+        font-weight: bold;
+        position:absolute;
+        transform: translate(-50%, -50%);
+        }
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+        }
+    #popup img{
+        align-items: center;
+        width: 70px;
+        height: 80px;
+    }
+    #popup .details {
+        width: 100%;
+        margin-bottom : 0px;
+        margin-top : 0px;
+        font-size: 8px;
+        text-align: justify;
+    }
+    #popup .details button{
+        position: fixed;
+        font-size: 12px;
+        color: black;
+        border-radius: 4px;
+        background-color:  rgb(158, 158, 161);
     }
     .availablebooks{
         display: none;

@@ -160,56 +160,21 @@ function booksborrowed(obj) {
 }
 
 function popup(i){
-    
+    document.getElementById("bookspopup").style.display = "block";
     var x = window.matchMedia("(max-width: 700px)")
     if (x.matches) { 
-          index = i+1
-          params = "ul li:nth-child(" +  index  + ")"
-    document.querySelectorAll(params)[0].style.height = "220px";
-    document.querySelectorAll(params)[0].style.textAlign = "justify";
-    
-    str = "<img src = '"+ books_list[i].img_url + "' alt='' width=180px id='pic'><div class='details'><h1>" + books_list[i].name + "</h1><p>" + books_list[i].author +"</p><p>" + books_list[i].cost + "</p><p>Books Available: " + books_list[i].books_available + "</p><p>Category: " + books_list[i].category + "</p><p>Description: " + books_list[i].description + "</p><button>Borrow</button><button class='close' onclick = 'span(" + index + ");'>Close</button></div>"
-    document.querySelectorAll(params)[0].innerHTML = str;
-
-    params_img = params + " img"
-    params_details = params + " .details"
-    params_button = params + " button"
-    params_para = params + " p"
-    params_header = params + " h1"
-    document.querySelectorAll(params_img)[0].style.width = "70px";
-    document.querySelectorAll(params_img)[0].style.height = "80px";
-    document.querySelectorAll(params_details)[0].style.fontSize = "6px";
-    document.querySelectorAll(params_details)[0].style.position = "absolute";
-    document.querySelectorAll(params_details)[0].style.marginRight = "10px";
-    document.querySelectorAll(params_details)[0].style.marginLeft = "5px";
-    document.querySelectorAll(params_button)[0].style.marginTop = "auto";
-    document.querySelectorAll(params_button)[0].style.marginLeft = "5px";
-    document.querySelectorAll(params_para)[0].style.marginTop = "10px";
-    document.querySelectorAll(params_header)[0].style.marginTop = "100px";
-      } else {
-       index = i+1
-    params = "ul li:nth-child(" +  index  + ")"
-    document.querySelectorAll(params)[0].style.width =  "695px";
-    document.querySelectorAll(params)[0].style.height = "240px";
-    document.querySelectorAll(params)[0].style.textAlign = "justify";
-    
-    str = "<img src = '"+ books_list[i].img_url + "' alt='' width=180px id='pic'><div class='details'><h1>" + books_list[i].name + "</h1><p>" + books_list[i].author +"</p><p>" + books_list[i].cost + "</p><p>Books Available: " + books_list[i].books_available + "</p><p>Category: " + books_list[i].category + "</p><p>Description: " + books_list[i].description + "</p><button>Borrow</button><button class='close' onclick = 'span(" + index + ");'>Close</button></div>"
-    document.querySelectorAll(params)[0].innerHTML = str;
-
-    params_img = params + " img"
-    params_details = params + " .details"
-    params_button = params + " button"
-    params_para = params + " p"
-    params_header = params + " h1"
-    document.querySelectorAll(params_img)[0].style.width = "120px";
-    document.querySelectorAll(params_img)[0].style.height = "230px";
-    document.querySelectorAll(params_details)[0].style.fontSize = "13px";
-    document.querySelectorAll(params_details)[0].style.marginRight = "20px";
-    document.querySelectorAll(params_button)[0].style.marginTop = "auto";
-    document.querySelectorAll(params_button)[0].style.marginLeft = "5px";
-    document.querySelectorAll(params_para)[0].style.marginTop = "10px";
-    document.querySelectorAll(params_header)[0].style.marginTop = "5px";
-      }
+        index = i+1
+        str = "<img src = '"+ books_list[i].img_url + "' alt='' width=180px id='pic'><div class='details'><h1>" + books_list[i].name + "</h1><p>" + books_list[i].author +"</p><p>Cost: " + books_list[i].cost + "</p><p>Books Available: " + books_list[i].books_available + "</p><p>Category: " + books_list[i].category + "</p><p>Description: " + books_list[i].description + "</p><button>Remove</button></div>"
+        document.getElementById("popup").innerHTML = str ;
+        document.getElementById("side-bar").style.filter = "blur(2px)";
+        document.getElementById("availablebooks").style.filter = "blur(2px)";
+      } else  {
+        index = i+1
+        str = "<img src = '"+ books_list[i].img_url + "' alt='' width=180px id='pic'><div class='details'><h1>" + books_list[i].name + "</h1><p>" + books_list[i].author +"</p><p>Cost: " + books_list[i].cost + "</p><p>Books Available: " + books_list[i].books_available + "</p><p>Category: " + books_list[i].category + "</p><p>Description: " + books_list[i].description + "</p><button>Borrow</button></div>"
+        document.getElementById("popup").innerHTML = str ;
+        document.getElementById("side-bar").style.filter = "blur(2px)";
+        document.getElementById("availablebooks").style.filter = "blur(2px)";
+     }
 }
 
 function span(i){
@@ -276,4 +241,12 @@ function closeSide(){
     if(x.matches) { 
     document.getElementById("side-bar").style.display = "none";
     }
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() {
+    document.getElementById("bookspopup").style.display = "none";
+    document.getElementById("side-bar").style.filter = "none";
+    document.getElementById("availablebooks").style.filter = "none";
 }
