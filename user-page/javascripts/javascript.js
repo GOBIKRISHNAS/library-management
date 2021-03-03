@@ -35,7 +35,7 @@ function availablebooks() {
     str=""
 
     if (books_list.length>0){
-        for (i = 0; i < books_list.length && i<12; i++) {
+        for (i = 0; i < books_list.length && i<21; i++) {
             str = str + "<li><a href='javascript:void(0)' onclick='popup(" + i + ");'><img src = '"+ books_list[i].img_url + "' alt='' width=180px id='pic'><div class='details'><h1>" + books_list[i].name + "</h1><p>" + books_list[i].author +"</p><p>" + books_list[i].cost + "</p><p>Books Available: " + books_list[i].books_available + "</p><p hidden>" + books_list[i].category + "</p></div></a></li>"
         } 
     }
@@ -44,7 +44,7 @@ function availablebooks() {
     }
 
     var index;
-    var counter = 12;
+    var counter = 21;
     document.getElementById("content1").innerHTML = str
     $(window).scroll(function () {  
         if ($(window).scrollTop() == $(document).height() - $(window).height()) { 
@@ -55,7 +55,7 @@ function availablebooks() {
     });  
     function appendData(counter) {  
         var html = '';  
-        for (i = counter; i < books_list.length && i< counter+12; i++) {  
+        for (i = counter; i < books_list.length && i< counter+21; i++) {  
             html = html + "<li><a href='javascript:void(0)' onclick='popup(" + i + ");'><img src = '"+ books_list[i].img_url + "' alt='' width=180px id='pic'><div class='details'><h1>" + books_list[i].name + "</h1><p>" + books_list[i].author +"</p><p>" + books_list[i].cost + "</p><p>Books Available: " + books_list[i].books_available + "</p><p hidden>" + books_list[i].category + "</p></div></a></li>"
             index = i;
         }  
