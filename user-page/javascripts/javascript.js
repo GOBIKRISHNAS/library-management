@@ -84,7 +84,7 @@ function availablebooks() {
 }
 function newarrivals() {
     obj = document.getElementById('nbooksbtn');
-    var source   = document.getElementById('text-template').innerHTML;
+    var source   = document.getElementById('text-template-1').innerHTML;
     var template = Handlebars.compile(source);
     str=""
 
@@ -92,7 +92,6 @@ function newarrivals() {
         for (i = 0; i < new_arrivals.length; i++) {
             func = "popup("+ i +");"
             var context = {
-                function_call: func, 
                 img_url: new_arrivals[i].img_url, 
                 name: new_arrivals[i].name, 
                 author: new_arrivals[i].author, 
@@ -124,14 +123,14 @@ function newarrivals() {
 }
 function booksborrowed() {
     obj = document.getElementById('bbooksbtn');
-    var source   = document.getElementById('text-template').innerHTML;
+    var source   = document.getElementById('text-template-1').innerHTML;
     var template = Handlebars.compile(source);
     str=""
 
     if (books_borrowed[user_name].length>0){
         for (i = 0; i < books_borrowed[user_name].length; i++) {
             func = "popup("+ i +");"
-            var context = {function_call: func, img_url: new_arrivals[i].img_url, name: new_arrivals[i].name, author: new_arrivals[i].author, cost: new_arrivals[i].cost, books_available: new_arrivals[i].books_available};
+            var context = { img_url: new_arrivals[i].img_url, name: new_arrivals[i].name, author: new_arrivals[i].author, cost: new_arrivals[i].cost, books_available: new_arrivals[i].books_available};
             var html    = template(context);
             str = str + html
         } 

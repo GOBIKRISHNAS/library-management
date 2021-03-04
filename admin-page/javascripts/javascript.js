@@ -90,7 +90,7 @@ function availablebooks() {
 }
 function newarrivals() {
     obj = document.getElementById('nbooksbtn');
-    var source   = document.getElementById('text-template').innerHTML;
+    var source   = document.getElementById('text-template-1').innerHTML;
     var template = Handlebars.compile(source);
     str=""
 
@@ -98,7 +98,6 @@ function newarrivals() {
         for (i = 0; i < new_arrivals.length; i++) {
             func = "popup("+ i +");"
             var context = {
-                function_call: func, 
                 img_url: new_arrivals[i].img_url, 
                 name: new_arrivals[i].name, 
                 author: new_arrivals[i].author, 
