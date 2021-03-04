@@ -12,10 +12,10 @@
          <div class="menu-text">Menu</div>
          <div class="bar1"></div>
          <div class="bar2"></div>
-         <div class="bar3"></div>  
-       </div>
-   </div>
-     <div id= "side-bar" class="side-bar">
+         <div class="bar3"></div>
+      </div>
+      </div>
+      <div id= "side-bar" class="side-bar">
          <div class="user-img"></div>
          <div class="user-name"></div>
          <span class="side-close"><button onclick= "closeSide();">&times;</button></span>
@@ -35,88 +35,128 @@
             <li><button class="tabslink1" id="authorsearch">Search by Author Name</button></li>
             <li><button class="tabslink1" id="categorysearch">Search by Category</button></li>
          </div>
-          <div id= "dashboard" class="dashboard">
-          <div class="content-dashboard">
-            <div class="book-details">
-               <button onclick = "newarrivals();"><div><hr>New Arrivals<hr><div id="new-arrivals"></div></div></button>
-               <button onclick = "booksborrowed();"><div><hr>Books Borrowed<hr><div id="books-borrowed"></div></div></button>
-               <button onclick= "availablebooks();"><div><hr>Books Available<hr><div id="books-available"></div></div></button>
-               <button><div><hr>Active Users<hr><div id="total-users"></div></div></button>
+         <div id= "dashboard" class="dashboard">
+            <div class="content-dashboard">
+               <div class="book-details">
+                  <button onclick = "newarrivals();">
+                     <div>
+                        <hr>
+                        New Arrivals
+                        <hr>
+                        <div id="new-arrivals"></div>
+                     </div>
+                  </button>
+                  <button onclick = "booksborrowed();">
+                     <div>
+                        <hr>
+                        Books Borrowed
+                        <hr>
+                        <div id="books-borrowed"></div>
+                     </div>
+                  </button>
+                  <button onclick= "availablebooks();">
+                     <div>
+                        <hr>
+                        Books Available
+                        <hr>
+                        <div id="books-available"></div>
+                     </div>
+                  </button>
+                  <button>
+                     <div>
+                        <hr>
+                        Active Users
+                        <hr>
+                        <div id="total-users"></div>
+                     </div>
+                  </button>
+               </div>
+               <img class="graph" src="https://cdn.iconscout.com/icon/free/png-256/horizontal-bar-chart-1549982-1316360.png">
+               <img class="graph1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxcVoIwi70MiqMcV1GlIPMZypJNBk27hz2eA&usqp=CAU">
+               <img class="graph2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_c1yQK6kuraqE-VMyzE_ySMXjdmaLP-Lnww&usqp=CAU">
+               <img class="graph3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpm_9ASjiRjoL42SvxW7uYY_PctowUfx8z8w&usqp=CAU">
+               <div class="quotes">
+                  <h2><q>I have always imagined that Paradise will be a kind of a Library</q></h2>
+                  <h3>- Jorge Luis Borges.</h3>
+               </div>
             </div>
-            <img class="graph" src="https://cdn.iconscout.com/icon/free/png-256/horizontal-bar-chart-1549982-1316360.png">
-            <img class="graph1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxcVoIwi70MiqMcV1GlIPMZypJNBk27hz2eA&usqp=CAU">
-            <img class="graph2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_c1yQK6kuraqE-VMyzE_ySMXjdmaLP-Lnww&usqp=CAU">
-            <img class="graph3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpm_9ASjiRjoL42SvxW7uYY_PctowUfx8z8w&usqp=CAU">
-            <div class="quotes">
-               <h2><q>I have always imagined that Paradise will be a kind of a Library</q></h2>
-               <h3>- Jorge Luis Borges.</h3>
-             </div>
          </div>
-      </div>
-      <div id= "availablebooks" class="availablebooks">
-         <button class="category-drop" id="category-drop"><div id="category-text">Select Category</div><i class="fa fa-caret-down"></i></button>
-         <input type="text" name ="search" class="searchTerm" id="myInput" onkeyup="myFunction(); filterFunction();" placeholder="Search for books by name or author or category..." title="Type in a name">
-         <div class="drop-category-down" id="drop-category-down">
-            <section>
-               <ul id="drop-content-list">
-               </ul>
-            </section>
+         <div id= "availablebooks" class="availablebooks">
+            <button class="category-drop" id="category-drop">
+               <div id="category-text">Select Category</div>
+               <i class="fa fa-caret-down"></i>
+            </button>
+            <input type="text" name ="search" class="searchTerm" id="myInput" onkeyup="myFunction(); filterFunction();" placeholder="Search for books by name or author or category..." title="Type in a name">
+            <div class="drop-category-down" id="drop-category-down">
+               <section>
+                  <ul id="drop-content-list">
+                  </ul>
+               </section>
+            </div>
+            <div id="wrapper">
+               <section>
+                  <ul id="content1"></ul>
+               </section>
+            </div>
          </div>
-         <div id="wrapper">
-        <section>
-            <ul id="content1"></ul>
-          </section>
-      </div>
-      </div>
-      <div id= "newarrivals" class="newarrivals">
-         <div id="wrapper">
-        <section>
-            <ul id="content2"></ul>
-          </section>
-      </div>
-      </div>
-      <div id= "booksborrowed" class="booksborrowed">
-         <div class="download"><button onclick="exportTableToExcel('content3')">Download Now</button></div>
-         <div><table id="content3"></table></div>
-      </div>
-      <div id= "addbooks" class="addbooks">
-         <form>
-            <div class="container">
-            <label for="name"><b>Book Name</b></label>
-            <input type="text" name="Book Name" placeholder="Book Name" required>
-            <span class="error"><p id="name_error"></p></span>
-    
-            <label for="author"><b>Author</b></label>
-            <input type="text" name="Author" placeholder="Author" required>
-             <span class="error"><p id="author_error"></p></span>
-    
-            <label for="books_count"><b>Number of Books</b></label>
-            <input type="text" name= "Number of Books" placeholder="Number of books" required>
-            <span class="error"><p id="count_error"></p></span>
-
-            <label for="category"><b>Category</b></label>
-            <input type="text" name= "Category" placeholder="Category" required>
-            <span class="error"><p id="category_error"></p></span>
-
-            <label for="category"><b>Description</b></label>
-            <input type="text" name= "Description" placeholder="Description" required>
-            <span class="error"><p id="description_error"></p></span>
-    
-            <label for="book_image"><b>Book Image</b></label>
-            <input type="file" id="img" name="Book Image" accept="image/gif, image/jpeg, image/png" required>
-            <span class="error"><p id="image_error"></p></span>
-            <div class="add-book"><button>Add Book</button></div>
-        </div>
-        </form>
-      </div>
-      <div id = "bookspopup" class="bookspopup">
-         <span class="close">&times;</span>
-         <div id="wrapper">
-            <section>
-                <ul id="popup"></ul>
-              </section>
-          </div>
-      </div>
+         <div id= "newarrivals" class="newarrivals">
+            <div id="wrapper">
+               <section>
+                  <ul id="content2"></ul>
+               </section>
+            </div>
+         </div>
+         <div id= "booksborrowed" class="booksborrowed">
+            <div class="download"><button onclick="exportTableToExcel('content3')">Download Now</button></div>
+            <div>
+               <table id="content3"></table>
+            </div>
+         </div>
+         <div id= "addbooks" class="addbooks">
+            <form>
+               <div class="container">
+                  <label for="name"><b>Book Name</b></label>
+                  <input type="text" name="Book Name" placeholder="Book Name" required>
+                  <span class="error">
+                     <p id="name_error"></p>
+                  </span>
+                  <label for="author"><b>Author</b></label>
+                  <input type="text" name="Author" placeholder="Author" required>
+                  <span class="error">
+                     <p id="author_error"></p>
+                  </span>
+                  <label for="books_count"><b>Number of Books</b></label>
+                  <input type="text" name= "Number of Books" placeholder="Number of books" required>
+                  <span class="error">
+                     <p id="count_error"></p>
+                  </span>
+                  <label for="category"><b>Category</b></label>
+                  <input type="text" name= "Category" placeholder="Category" required>
+                  <span class="error">
+                     <p id="category_error"></p>
+                  </span>
+                  <label for="category"><b>Description</b></label>
+                  <input type="text" name= "Description" placeholder="Description" required>
+                  <span class="error">
+                     <p id="description_error"></p>
+                  </span>
+                  <label for="book_image"><b>Book Image</b></label>
+                  <input type="file" id="img" name="Book Image" accept="image/gif, image/jpeg, image/png" required>
+                  <span class="error">
+                     <p id="image_error"></p>
+                  </span>
+                  <div class="add-book"><button>Add Book</button></div>
+               </div>
+            </form>
+         </div>
+         <div id = "bookspopup" class="bookspopup">
+            <span class="close">&times;</span>
+            <div id="wrapper">
+               <section>
+                  <ul id="popup"></ul>
+               </section>
+            </div>
+         </div>
       </div>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <script src="../constant.js"></script>
@@ -135,8 +175,8 @@
                </div>
             </a>
          </li>
-       </script>
-       <script id="text-template-1" type="text/x-handlebars-template">
+      </script>
+      <script id="text-template-1" type="text/x-handlebars-template">
          <li>
             <img src = {{img_url}} alt='' width=180px id='pic'>
             <div class='details'>
@@ -146,6 +186,6 @@
                <p hidden>{{category}}</p>
             </div>
          </li>
-       </script>
+      </script>
    </body>
 </html>

@@ -1,713 +1,765 @@
 body {
-    height: 100%;
+	height: 100%;
 }
-.side-bar{
-    width:250px;
-    height:100%;
-    margin: auto;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    background-color: rgb(62, 62, 112);
+
+.side-bar {
+	width: 250px;
+	height: 100%;
+	margin: auto;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background-color: rgb(62, 62, 112);
 }
-.dashboard{
-    width:100%;
-    height:100%;
-    top:0px;
-    left:250px;
-    margin: auto;
-    position: fixed;
-    background: white;
-    z-index: 1;
+
+.dashboard {
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 250px;
+	margin: auto;
+	position: fixed;
+	background: white;
+	z-index: 1;
 }
-.bookspopup{
-    position: fixed;
-    background-color: bisque;
-    display: none; 
-    position: fixed;
-    z-index: 1; 
-    width:800px;
-    height:350px;
-    padding:40px 38px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 0 #000;
-    transform: translate(-50%, -50%);
-    top:50%;
-    left:50%;
+
+.bookspopup {
+	position: fixed;
+	background-color: bisque;
+	display: none;
+	position: fixed;
+	z-index: 1;
+	width: 800px;
+	height: 350px;
+	padding: 40px 38px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px 0 #000;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
 }
+
 .close {
-    color: #aaaaaa;
-    float: left;
-    top: 14px;
-    left: 860px;
-    font-size: 35px;
-    font-weight: bold;
-    position:absolute;
-    transform: translate(-50%, -50%);
-    }
+	color: #aaaaaa;
+	float: left;
+	top: 14px;
+	left: 860px;
+	font-size: 35px;
+	font-weight: bold;
+	position: absolute;
+	transform: translate(-50%, -50%);
+}
+
 .close:hover,
 .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-    }
-#popup img{
-    margin-top: -30px;
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
 }
+
+#popup img {
+	margin-top: -30px;
+}
+
 #popup .details {
-    float: right;
-    width: 75%;
-    margin-bottom : 0px;
-    margin-top : -50px;
-    font-size: 16px;
-    text-align: justify;
+	float: right;
+	width: 75%;
+	margin-bottom: 0px;
+	margin-top: -50px;
+	font-size: 16px;
+	text-align: justify;
 }
-#popup .details button{
-    position: fixed;
-    font-size: 20px;
-    color: black;
-    border-radius: 4px;
-    background-color:  rgb(158, 158, 161);
+
+#popup .details button {
+	position: fixed;
+	font-size: 20px;
+	color: black;
+	border-radius: 4px;
+	background-color: rgb(158, 158, 161);
 }
-.availablebooks{
-    display: none;
-    width:100%;
-    height:auto;
-    top:0px;
-    left:250px;
-    margin: auto;
-    position: absolute;
-    background: white;
-    z-index: 1;
+
+.availablebooks {
+	display: none;
+	width: 100%;
+	height: auto;
+	top: 0px;
+	left: 250px;
+	margin: auto;
+	position: absolute;
+	background: white;
+	z-index: 1;
 }
-.newarrivals{
-    display: none;
-    width:100%;
-    height:auto;
-    top:0px;
-    left:250px;
-    margin: auto;
-    position: absolute;
-    background: white;
-    z-index: 1;
+
+.newarrivals {
+	display: none;
+	width: 100%;
+	height: auto;
+	top: 0px;
+	left: 250px;
+	margin: auto;
+	position: absolute;
+	background: white;
+	z-index: 1;
 }
-.booksborrowed{
-    display: none;
-    width:100%;
-    height:auto;
-    top:0px;
-    left:250px;
-    margin: auto;
-    position: absolute;
-    background: white;
-    z-index: 1;
+
+.booksborrowed {
+	display: none;
+	width: 100%;
+	height: auto;
+	top: 0px;
+	left: 250px;
+	margin: auto;
+	position: absolute;
+	background: white;
+	z-index: 1;
 }
-.searchtab{
-    display: none;
-    width:100%;
-    height:auto;
-    top:0px;
-    left:250px;
-    margin: auto;
-    position: absolute;
-    background: white;
-    z-index: 1;
+
+.searchtab {
+	display: none;
+	width: 100%;
+	height: auto;
+	top: 0px;
+	left: 250px;
+	margin: auto;
+	position: absolute;
+	background: white;
+	z-index: 1;
 }
-.user-img{
-    background: url('https://img.icons8.com/bubbles/2x/user-male.png') no-repeat;
-    background-size: 50%;
-    background-position-x: center;
-    width: 100%;
-    height: 100%;
-    position:absolute;
-    vertical-align: middle;
-    
+
+.user-img {
+	background: url('https://img.icons8.com/bubbles/2x/user-male.png') no-repeat;
+	background-size: 50%;
+	background-position-x: center;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	vertical-align: middle;
 }
-.user-name{
-    font-family: Calibri, Helvetica, sans-serif; 
-    color: white;
-    position: absolute;
-    top: 120px;
-    width: 250px;
-    text-align: center;
-    font-size: 30px;
-    font-weight: bold;
+
+.user-name {
+	font-family: Calibri, Helvetica, sans-serif;
+	color: white;
+	position: absolute;
+	top: 120px;
+	width: 250px;
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
 }
-.options-list li{
-    list-style-type: none;
-    padding-top: 15px;
+
+.options-list li {
+	list-style-type: none;
+	padding-top: 15px;
 }
-.options-list{
-    top:170px;
-    width: 100%;
-    position: absolute;
+
+.options-list {
+	top: 170px;
+	width: 100%;
+	position: absolute;
 }
-button{
-    font-family: Calibri, Helvetica, sans-serif; 
-    font-size: 20px;
-    color: white;
-    background: none;
-    border: none;
+
+button {
+	font-family: Calibri, Helvetica, sans-serif;
+	font-size: 20px;
+	color: white;
+	background: none;
+	border: none;
 }
-.options-list a{
-    color: white;
+
+.options-list a {
+	color: white;
 }
-.options-list a:link{
-    text-decoration: none;
+
+.options-list a:link {
+	text-decoration: none;
 }
-.top-bar{
-    background: darkslategray;
-    margin: auto;
-    padding: 10px;
-    font-family: Calibri, Helvetica, sans-serif; 
-    font-size: 20px;
-    color: white;
-    position: fixed;
-    width: 100%;
+
+.top-bar {
+	background: darkslategray;
+	margin: auto;
+	padding: 10px;
+	font-family: Calibri, Helvetica, sans-serif;
+	font-size: 20px;
+	color: white;
+	position: fixed;
+	width: 100%;
 }
-.content-dashboard table{
-    padding: 30px;
-    border: 1px solid white;
+
+.content-dashboard table {
+	padding: 30px;
+	border: 1px solid white;
 }
+
 .book-details {
-    display: grid;
-    position: absolute;
-    width:75%;
-    top: 50px;
-    left: 40px;
-    grid-template-columns: auto auto auto auto;
-    grid-column-gap: 30px;
-    grid-row-gap: 10px;
-    padding: 10px;
-  }
-  .book-details > button{
-    background: white;
-    text-align: center;
-    width: 220px;
-    height: 110px;
-    padding: 5px 0;
-    font-family: Calibri, Helvetica, sans-serif; 
-    font-size: 20px;
-    font-weight:bold;
-    color: black;
-    border-radius: 5px;
-  }
-hr{
-    border: none;
+	display: grid;
+	position: absolute;
+	width: 75%;
+	top: 50px;
+	left: 40px;
+	grid-template-columns: auto auto auto auto;
+	grid-column-gap: 30px;
+	grid-row-gap: 10px;
+	padding: 10px;
 }
 
-.book-details > button:nth-child(1) {
-    background: rgb(163, 253, 163);
-  }
+.book-details>button {
+	background: white;
+	text-align: center;
+	width: 220px;
+	height: 110px;
+	padding: 5px 0;
+	font-family: Calibri, Helvetica, sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	color: black;
+	border-radius: 5px;
+}
 
-.book-details > button:nth-child(2) {
-    background: rgb(166, 210, 238);
-  }
-.book-details > button:nth-child(3) {
-    background: rgb(233, 143, 163);
-  }
-.book-details > button:nth-child(4) {
-    background: rgb(230, 141, 193);
-  }
+hr {
+	border: none;
+}
+
+.book-details>button:nth-child(1) {
+	background: rgb(163, 253, 163);
+}
+
+.book-details>button:nth-child(2) {
+	background: rgb(166, 210, 238);
+}
+
+.book-details>button:nth-child(3) {
+	background: rgb(233, 143, 163);
+}
+
+.book-details>button:nth-child(4) {
+	background: rgb(230, 141, 193);
+}
 
 #wrapper ul {
-    padding: 40px 10px;
-    width: 100%;
-    list-style-type: none;
+	padding: 40px 10px;
+	width: 100%;
+	list-style-type: none;
 }
+
 #wrapper ul li {
-    background-color: rgb(200, 200, 245);
-    padding: 20px 0px;
-    margin-bottom: 10px;
-    display: table;
-    width: 25%;
-    float: left;
-    margin-left: 20px;
+	background-color: rgb(200, 200, 245);
+	padding: 20px 0px;
+	margin-bottom: 10px;
+	display: table;
+	width: 25%;
+	float: left;
+	margin-left: 20px;
 }
+
 #wrapper ul li img {
-    margin-left: 20px;
-    float: left;
-    width: 50px;
-    height: 90px;
-    left: 10px;
+	margin-left: 20px;
+	float: left;
+	width: 50px;
+	height: 90px;
+	left: 10px;
 }
+
 #wrapper ul li .details {
-    float: right;
-    width: 75%;
-    margin-bottom : 0px;
-    margin-top : 0px;
-    font-size: 0.6vw;
+	float: right;
+	width: 75%;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	font-size: 0.6vw;
 }
-#wrapper ul li .details button{
-    position: absolute;
-    font-size: 15px;
-    color: black;
-    margin-left: 160px;
-    margin-top: -26px;
-    border-radius: 4px;
-    background-color:  rgb(158, 158, 161);
+
+#wrapper ul li .details button {
+	position: absolute;
+	font-size: 15px;
+	color: black;
+	margin-left: 160px;
+	margin-top: -26px;
+	border-radius: 4px;
+	background-color: rgb(158, 158, 161);
 }
-#wrapper ul li a{
-    color: black;
+
+#wrapper ul li a {
+	color: black;
 }
+
 .searchTerm {
-    background-repeat: no-repeat;
-    width: 77%;
-    font-size: 16px;
-    padding: 10px;
-    border: 2px solid #ddd;
-    margin-top: 10px;
-    margin-left: 20px;
-    margin-bottom: -100px;
-  }
+	background-repeat: no-repeat;
+	width: 77%;
+	font-size: 16px;
+	padding: 10px;
+	border: 2px solid #ddd;
+	margin-top: 10px;
+	margin-left: 20px;
+	margin-bottom: -100px;
+}
 
-  .graph{
-    background-size: cover;
-    position: absolute;
-    width:auto;
-    height: 24%;
-    top: 34%;
-    left: 60px;
-    padding: auto;
-    }
+.graph {
+	background-size: cover;
+	position: absolute;
+	width: auto;
+	height: 24%;
+	top: 34%;
+	left: 60px;
+	padding: auto;
+}
 
-.graph1{
-    background-size: cover;
-    position: absolute;
-    width:16%;
-    height: 30%;
-    top: 32%;
-    left: 370px;
-    padding: auto;
-       }
-.graph2{
-    background-size: cover;
-    position: absolute;
-    width:18%;
-    height: 40%;
-    top: 27%;
-    left: 740px;
-    padding: auto;
-       }
+.graph1 {
+	background-size: cover;
+	position: absolute;
+	width: 16%;
+	height: 30%;
+	top: 32%;
+	left: 370px;
+	padding: auto;
+}
 
-.graph3{
-    background-size: cover;
-    position: absolute;
-    width:15%;
-    height: 30%;
-    top: 31%;
-    left: 1100px;
-    padding: auto;
+.graph2 {
+	background-size: cover;
+	position: absolute;
+	width: 18%;
+	height: 40%;
+	top: 27%;
+	left: 740px;
+	padding: auto;
 }
-.quotes h2{
-    width: 82%;
-    text-align: center;
-    margin-top:700px;
-}
-.quotes h3{
-    margin-left:700px;
-}
-.tabslink, .tabslink1 {
-    font-family: Calibri, Helvetica, sans-serif; 
-    border: none;
-    outline: none;
-    padding: 10px 16px;
-    cursor: pointer;
-    font-size: 20px;
-    width: 100%
-  }
 
-  .active, .tabslink:hover, .tabslink1:hover{
-    background-color: white;
-    color: Black;
-  }
-  #wrapper ul li .details .close{
-    position: absolute;
-    font-size: 15px;
-    color: black;
-    margin-left: 70px;;
-    margin-top: auto;
-    border-radius: 4px;
-    background-color: rgb(158, 158, 161);
-    width: 65px;
+.graph3 {
+	background-size: cover;
+	position: absolute;
+	width: 15%;
+	height: 30%;
+	top: 31%;
+	left: 1100px;
+	padding: auto;
 }
-.side-close button{
-    display: none;
-    color: white;
-    background:  rgb(62, 62, 112);
-    border: white;
-    margin-left:89px;
-    z-index: 1;
+
+.quotes h2 {
+	width: 82%;
+	text-align: center;
+	margin-top: 700px;
 }
+
+.quotes h3 {
+	margin-left: 700px;
+}
+
+.tabslink,
+.tabslink1 {
+	font-family: Calibri, Helvetica, sans-serif;
+	border: none;
+	outline: none;
+	padding: 10px 16px;
+	cursor: pointer;
+	font-size: 20px;
+	width: 100%
+}
+
+.active,
+.tabslink:hover,
+.tabslink1:hover {
+	background-color: white;
+	color: Black;
+}
+
+#wrapper ul li .details .close {
+	position: absolute;
+	font-size: 15px;
+	color: black;
+	margin-left: 70px;
+	;
+	margin-top: auto;
+	border-radius: 4px;
+	background-color: rgb(158, 158, 161);
+	width: 65px;
+}
+
+.side-close button {
+	display: none;
+	color: white;
+	background: rgb(62, 62, 112);
+	border: white;
+	margin-left: 89px;
+	z-index: 1;
+}
+
 .fa-caret-right {
-    float: right;
-    padding-right: 8px;
-}
-.search-drop-down li{
-    list-style-type: none;
-    padding-top: 5px;
-    padding-bottom: 15px;
-}
-.search-drop-down{
-    display: none;
-    top:470px;
-    left: 250px;
-    width: 250px;
-    height: auto;
-    position: fixed;
-    background:rgb(62, 62, 112);
-    z-index:2;
-}
-.search-drop-down li button{
-    font-family: Calibri, Helvetica, sans-serif; 
-    font-size: 20px;
-    color: white;
-    background: none;
-    border: none;
-}
-.search-drop-down a{
-    color: white;
-}
-.search-drop-down a:link{
-    text-decoration: none;
-}
-.category-drop{
-    display: none;
-    background: rgb(62, 62, 112);
-    width: 240px;
-    margin-left: 30px;
-    padding: 9px 0px 10px;
-    font-size: 1vw;
-}
-.fa-caret-down {
-    float: right;
-    margin-top: -20px;
-    padding-right: 10px;
-}
-.drop-category-down #drop-content-list{
-    display: none;
-    width: 76%;
-    height: auto;
-    margin-left: 20px;
-    background:rgb(200, 200, 245);
-}
-.drop-category-down #drop-content-list li{
-    list-style-type: none;
-    padding: 20px;
-    display: block;
-}
-.drop-category-down #drop-content-list li a{
-    font-size: 20px;
-    color: black;
-    text-decoration: none;
-}
-@media only screen and (max-width:450px) {
-    .side-bar{
-        display: none;
-        width:90px;
-        height:100%;
-        margin: auto;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        background-color: rgb(62, 62, 112);
-        z-index: 1;
-    }
-    .menu-icon {
-        display: inline-block;
-        cursor: pointer;
-      }
-      
-      .bar1, .bar2, .bar3 {
-        width: 15px;
-        height: 3px;
-        background-color: #333;
-        margin: 3px 0;
-        transition: 0.4s;
-      }
-    .menu-text{
-        float: right;
-        margin-left: 20px;
-        margin-top: 2px;
-    }
-    .user-name{
-        font-family: Calibri, Helvetica, sans-serif; 
-        color: white;
-        position: fixed;
-        top: 90px;
-        width: 90px;
-        text-align: center;
-        font-size: 18px;
-        font-weight: bold;
-    }
-    .user-img{
-        background: url('https://img.icons8.com/bubbles/2x/user-male.png') no-repeat;
-        background-size: 50%;
-        background-position-x: center;
-        top: 30px;
-        width: 100%;
-        height: 100%;
-        position:absolute;
-        vertical-align: middle;  
-    }
-    .options-list li{
-        list-style-type: none;
-        padding-top: 5px;
-    }
-    .options-list{
-        top:120px;
-        width: 100%;
-        position: absolute;
-    }
-    .options-list li button{
-        font-family: Calibri, Helvetica, sans-serif; 
-        font-size: 10px;
-        color: white;
-        background: none;
-        border: none;
-    }
-    .options-list a{
-        color: white;
-    }
-    .options-list a:link{
-        text-decoration: none;
-    }
-    .side-close button{
-        display: inline-block;
-        color: white;
-        background:  rgb(62, 62, 112);
-        border: white;
-        margin-left:89px;
-        z-index: 1;
-    }
-    .dashboard{
-        width:70%;
-        height:100%;
-        top:40px;
-        left:0px;
-        margin: auto;
-        position: absolute;
-        background: white;
-        z-index: -1;
-    }
-    .bookspopup{
-        position: fixed;
-        background-color: bisque;
-        display: none; 
-        position: fixed;
-        z-index: 1; 
-        width:180px;
-        height:300px;
-        padding:40px 38px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px 0 #000;
-        transform: translate(-50%, -50%);
-        top:35%;
-        left:50%;
-    }
-    .close {
-        color: #aaaaaa;
-        float: left;
-        top: 14px;
-        left: 240px;
-        font-size: 25px;
-        font-weight: bold;
-        position:absolute;
-        transform: translate(-50%, -50%);
-        }
-    .close:hover,
-    .close:focus {
-        color: #000;
-        text-decoration: none;
-        cursor: pointer;
-        }
-    #popup img{
-        align-items: center;
-        width: 70px;
-        height: 80px;
-    }
-    #popup .details {
-        width: 100%;
-        margin-bottom : 0px;
-        margin-top : 0px;
-        font-size: 8px;
-        text-align: justify;
-    }
-    #popup .details button{
-        position: fixed;
-        font-size: 12px;
-        color: black;
-        border-radius: 4px;
-        background-color:  rgb(158, 158, 161);
-    }
-    .availablebooks{
-        display: none;
-        width:70%;
-        height:auto;
-        top:0px;
-        left:90px;
-        margin: auto;
-        position: absolute;
-        background: white;
-        z-index: -1;
-    }
-    .newarrivals{
-        display: none;
-        width:70%;
-        height:auto;
-        top:0px;
-        left:90px;
-        margin: auto;
-        position: absolute;
-        background: white;
-        z-index: -1;
-    }
-    .booksborrowed{
-        display: none;
-        width:70%;
-        height:auto;
-        top:0px;
-        left:90px;
-        margin: auto;
-        position: absolute;
-        background: white;
-        z-index: -1;
-    }
-    .book-details {
-        display: grid;
-        position: absolute;
-        width:35%;
-        top: 20px;
-        left:  45px;
-        grid-column-gap: 20px;
-        grid-row-gap: 10px;
-      }
-      .book-details > button{
-        font-size: 10px;
-        width: 120px;
-        height: 60px;
-      }
-    .book-details > button:nth-child(3){
-        position: absolute;
-        top: 80px;
-        left: 10px;
-      }
-    .book-details > button:nth-child(4){
-        position: absolute;
-        top: 80px;
-        left: 150px;
-      }
-      .graph{
-        background-size: cover;
-        position: absolute;
-        width:70px;
-        height: 65px;
-        top: 180px;
-        left: 90px;
-        padding: auto;
-       }
-   
-   .graph1{
-    background-size: cover;
-    position: absolute;
-    width:70px;
-    height: 75px;
-    top: 175px;
-    left: 225px;
-    padding: auto;
-          }
-   .graph2{
-    background-size: cover;
-    position: absolute;
-    width:auto;
-    height: 70px;
-    top: 260px;
-    left: 95px;
-    padding: auto;
-          }
-   
-   .graph3{
-    background-size: cover;
-    position: absolute;
-    width:auto;
-    height: 70px;
-    top: 260px;
-    left: 225px;
-    padding: auto;
-   }
-   .quotes h2{
-    width: 100%;
-    text-align: center;
-    margin-top:350px;
-    margin-left: 60px;
-    font-size:10px;
-   }
-   .quotes h3{
-    width: 100%;
-    text-align: center;
-    margin: auto;
-    margin-left: 150px;
-    font-size:10px;
-    color: black;
-   }
-   .searchTerm {
-    width: 88%;
-    font-size: 7px;
-    padding: 4px;
-    border: 2px solid #ddd;
-    margin-top: 10px;
-    margin-left: 0px;
-    margin-bottom: -100px;
-  }
-  #wrapper ul {
-    margin-top: 0px;
-    padding: auto;
-    width: 100%;
-    list-style-type: none;
-}
-  #wrapper ul li {
-    background-color: rgb(200, 200, 245);
-    padding: 8px 0px;
-    margin-bottom: 5px;
-    display: table;
-    width: 90%;
-    float: left;
-    margin-left: -30px;
-}
-#wrapper ul li img {
-    margin-top: 0px;
-    margin-left: 5px;
-    float: left;
-    width: 40px;
-    height: 60px;
-    left: 10px;
-}
-#wrapper ul li .details {
-    width: 70%;
-    font-size: 7px;
-}
-#wrapper ul li .details h1{
-    margin-top: 10px;
-    font-size: 8px;
-}
-#wrapper ul li .details button{
-    position: absolute;
-    font-size: 6px;
-    color: black;
-    margin-left: 80px;
-    margin-top: -16px;
-    border-radius: 4px;
-    background-color:  rgb(158, 158, 161);
-}
-#wrapper ul li .details .close{
-    position: absolute;
-    font-size: 6px;
-    color: black;
-    margin-left: 40px;;
-    margin-top: auto;
-    border-radius: 4px;
-    background-color: rgb(158, 158, 161);
-    width: 35px;
+	float: right;
+	padding-right: 8px;
 }
 
-  }
+.search-drop-down li {
+	list-style-type: none;
+	padding-top: 5px;
+	padding-bottom: 15px;
+}
+
+.search-drop-down {
+	display: none;
+	top: 412px;
+	left: 250px;
+	width: 250px;
+	height: auto;
+	position: fixed;
+	background: rgb(62, 62, 112);
+	z-index: 2;
+}
+
+.search-drop-down li button {
+	font-family: Calibri, Helvetica, sans-serif;
+	font-size: 20px;
+	color: white;
+	background: none;
+	border: none;
+}
+
+.search-drop-down a {
+	color: white;
+}
+
+.search-drop-down a:link {
+	text-decoration: none;
+}
+
+.category-drop {
+	display: none;
+	background: rgb(62, 62, 112);
+	width: 240px;
+	margin-left: 30px;
+	padding: 9px 0px 10px;
+	font-size: 1vw;
+}
+
+.fa-caret-down {
+	float: right;
+	margin-top: -20px;
+	padding-right: 10px;
+}
+
+.drop-category-down #drop-content-list {
+	display: none;
+	width: 76%;
+	height: auto;
+	margin-left: 20px;
+	background: rgb(200, 200, 245);
+}
+
+.drop-category-down #drop-content-list li {
+	list-style-type: none;
+	padding: 20px;
+	display: block;
+}
+
+.drop-category-down #drop-content-list li a {
+	font-size: 20px;
+	color: black;
+	text-decoration: none;
+}
+
+@media only screen and (max-width:450px) {
+	.side-bar {
+		display: none;
+		width: 90px;
+		height: 100%;
+		margin: auto;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		background-color: rgb(62, 62, 112);
+		z-index: 1;
+	}
+	.menu-icon {
+		display: inline-block;
+		cursor: pointer;
+	}
+	.bar1,
+	.bar2,
+	.bar3 {
+		width: 15px;
+		height: 3px;
+		background-color: #333;
+		margin: 3px 0;
+		transition: 0.4s;
+	}
+	.menu-text {
+		float: right;
+		margin-left: 20px;
+		margin-top: 2px;
+	}
+	.user-name {
+		font-family: Calibri, Helvetica, sans-serif;
+		color: white;
+		position: fixed;
+		top: 90px;
+		width: 90px;
+		text-align: center;
+		font-size: 18px;
+		font-weight: bold;
+	}
+	.user-img {
+		background: url('https://img.icons8.com/bubbles/2x/user-male.png') no-repeat;
+		background-size: 50%;
+		background-position-x: center;
+		top: 30px;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		vertical-align: middle;
+	}
+	.options-list li {
+		list-style-type: none;
+		padding-top: 5px;
+	}
+	.options-list {
+		top: 120px;
+		width: 100%;
+		position: absolute;
+	}
+	.options-list li button {
+		font-family: Calibri, Helvetica, sans-serif;
+		font-size: 10px;
+		color: white;
+		background: none;
+		border: none;
+	}
+	.options-list a {
+		color: white;
+	}
+	.options-list a:link {
+		text-decoration: none;
+	}
+	.side-close button {
+		display: inline-block;
+		color: white;
+		background: rgb(62, 62, 112);
+		border: white;
+		margin-left: 89px;
+		z-index: 1;
+	}
+	.dashboard {
+		width: 70%;
+		height: 100%;
+		top: 40px;
+		left: 0px;
+		margin: auto;
+		position: absolute;
+		background: white;
+		z-index: -1;
+	}
+	.bookspopup {
+		position: fixed;
+		background-color: bisque;
+		display: none;
+		position: fixed;
+		z-index: 1;
+		width: 180px;
+		height: 300px;
+		padding: 40px 38px;
+		border-radius: 10px;
+		box-shadow: 0 0 10px 0 #000;
+		transform: translate(-50%, -50%);
+		top: 35%;
+		left: 50%;
+	}
+	.close {
+		color: #aaaaaa;
+		float: left;
+		top: 14px;
+		left: 240px;
+		font-size: 25px;
+		font-weight: bold;
+		position: absolute;
+		transform: translate(-50%, -50%);
+	}
+	.close:hover,
+	.close:focus {
+		color: #000;
+		text-decoration: none;
+		cursor: pointer;
+	}
+	#popup img {
+		align-items: center;
+		width: 70px;
+		height: 80px;
+	}
+	#popup .details {
+		width: 100%;
+		margin-bottom: 0px;
+		margin-top: 0px;
+		font-size: 8px;
+		text-align: justify;
+	}
+	#popup .details button {
+		position: fixed;
+		font-size: 12px;
+		color: black;
+		border-radius: 4px;
+		background-color: rgb(158, 158, 161);
+	}
+	.availablebooks {
+		display: none;
+		width: 70%;
+		height: auto;
+		top: 0px;
+		left: 90px;
+		margin: auto;
+		position: absolute;
+		background: white;
+		z-index: -1;
+	}
+	.newarrivals {
+		display: none;
+		width: 70%;
+		height: auto;
+		top: 0px;
+		left: 90px;
+		margin: auto;
+		position: absolute;
+		background: white;
+		z-index: -1;
+	}
+	.booksborrowed {
+		display: none;
+		width: 70%;
+		height: auto;
+		top: 0px;
+		left: 90px;
+		margin: auto;
+		position: absolute;
+		background: white;
+		z-index: -1;
+	}
+	.book-details {
+		display: grid;
+		position: absolute;
+		width: 35%;
+		top: 20px;
+		left: 45px;
+		grid-column-gap: 20px;
+		grid-row-gap: 10px;
+	}
+	.book-details>button {
+		font-size: 10px;
+		width: 120px;
+		height: 60px;
+	}
+	.book-details>button:nth-child(3) {
+		position: absolute;
+		top: 80px;
+		left: 10px;
+	}
+	.book-details>button:nth-child(4) {
+		position: absolute;
+		top: 80px;
+		left: 150px;
+	}
+	.graph {
+		background-size: cover;
+		position: absolute;
+		width: 70px;
+		height: 65px;
+		top: 180px;
+		left: 90px;
+		padding: auto;
+	}
+	.graph1 {
+		background-size: cover;
+		position: absolute;
+		width: 70px;
+		height: 75px;
+		top: 175px;
+		left: 225px;
+		padding: auto;
+	}
+	.graph2 {
+		background-size: cover;
+		position: absolute;
+		width: auto;
+		height: 70px;
+		top: 260px;
+		left: 95px;
+		padding: auto;
+	}
+	.graph3 {
+		background-size: cover;
+		position: absolute;
+		width: auto;
+		height: 70px;
+		top: 260px;
+		left: 225px;
+		padding: auto;
+	}
+	.quotes h2 {
+		width: 100%;
+		text-align: center;
+		margin-top: 350px;
+		margin-left: 60px;
+		font-size: 10px;
+	}
+	.quotes h3 {
+		width: 100%;
+		text-align: center;
+		margin: auto;
+		margin-left: 150px;
+		font-size: 10px;
+		color: black;
+	}
+	.searchTerm {
+		width: 88%;
+		font-size: 7px;
+		padding: 4px;
+		border: 2px solid #ddd;
+		margin-top: 10px;
+		margin-left: 0px;
+		margin-bottom: -100px;
+	}
+	#wrapper ul {
+		margin-top: 0px;
+		padding: auto;
+		width: 100%;
+		list-style-type: none;
+	}
+	#wrapper ul li {
+		background-color: rgb(200, 200, 245);
+		padding: 8px 0px;
+		margin-bottom: 5px;
+		display: table;
+		width: 90%;
+		float: left;
+		margin-left: -30px;
+	}
+	#wrapper ul li img {
+		margin-top: 0px;
+		margin-left: 5px;
+		float: left;
+		width: 40px;
+		height: 60px;
+		left: 10px;
+	}
+	#wrapper ul li .details {
+		width: 70%;
+		font-size: 7px;
+	}
+	#wrapper ul li .details h1 {
+		margin-top: 10px;
+		font-size: 8px;
+	}
+	#wrapper ul li .details button {
+		position: absolute;
+		font-size: 6px;
+		color: black;
+		margin-left: 80px;
+		margin-top: -16px;
+		border-radius: 4px;
+		background-color: rgb(158, 158, 161);
+	}
+	#wrapper ul li .details .close {
+		position: absolute;
+		font-size: 6px;
+		color: black;
+		margin-left: 40px;
+		;
+		margin-top: auto;
+		border-radius: 4px;
+		background-color: rgb(158, 158, 161);
+		width: 35px;
+	}
+}
