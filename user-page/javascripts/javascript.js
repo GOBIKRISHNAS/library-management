@@ -11,8 +11,8 @@ document.getElementById("books-borrowed").innerHTML = books_borrowed[user_name].
 document.getElementById("credit-score").innerHTML = books_borrowed[user_name].length;
 
 
-function dashboard(obj) {
-
+function dashboard() {
+    obj = document.getElementById('dashbtn')
     var current = document.getElementsByClassName("active");
     current[0].classList.remove("active");
     
@@ -29,8 +29,8 @@ function dashboard(obj) {
     }
 }
 
-function availablebooks(obj) {
-
+function availablebooks() {
+    obj = document.getElementById('abooksbtn');
     var source   = document.getElementById('text-template').innerHTML;
     var template = Handlebars.compile(source);
     str=""
@@ -38,7 +38,7 @@ function availablebooks(obj) {
     if (books_list.length>0){
         for (i = 0; i < books_list.length && i<21; i++) {
             func = "popup("+ i +");"
-            var context = {function_call: func, img_url: books_list[i].img_url, name: books_list[i].name, author: books_list[i].author, cost: books_list[i].cost, books_available: books_list[i].books_available};
+            var context = {function_call: func, img_url: books_list[i].img_url, name: books_list[i].name, author: books_list[i].author, books_available: books_list[i].books_available};
             var html    = template(context);
             str = str + html
         } 
@@ -82,8 +82,8 @@ function availablebooks(obj) {
     document.getElementById("side-bar").style.display = "none";
     }
 }
-function newarrivals(obj) {
-
+function newarrivals() {
+    obj = document.getElementById('nbooksbtn');
     var source   = document.getElementById('text-template').innerHTML;
     var template = Handlebars.compile(source);
     str=""
@@ -122,8 +122,8 @@ function newarrivals(obj) {
     document.getElementById("side-bar").style.display = "none";
     }
 }
-function booksborrowed(obj) {
-
+function booksborrowed() {
+    obj = document.getElementById('bbooksbtn');
     var source   = document.getElementById('text-template').innerHTML;
     var template = Handlebars.compile(source);
     str=""
