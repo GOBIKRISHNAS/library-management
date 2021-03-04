@@ -325,7 +325,7 @@ hr{
     margin-left:700px;
 }
 
-.tabslink {
+.tabslink, .tabslink1 {
     font-family: Calibri, Helvetica, sans-serif; 
     border: none;
     outline: none;
@@ -335,7 +335,7 @@ hr{
     width: 100%
   }
 
-  .active, .tabslink:hover {
+  .active, .tabslink:hover, .tabslink1:hover{
     background-color: white;
     color: Black;
   }
@@ -392,6 +392,69 @@ form {
     margin-left:89px;
     z-index: 1;
 }
+.fa-caret-right {
+    float: right;
+    padding-right: 8px;
+}
+.search-drop-down li{
+    list-style-type: none;
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+.search-drop-down{
+    display: none;
+    top:470px;
+    left: 250px;
+    width: 250px;
+    height: auto;
+    position: fixed;
+    background:rgb(62, 62, 112);
+    z-index:2;
+}
+.search-drop-down li button{
+    font-family: Calibri, Helvetica, sans-serif; 
+    font-size: 20px;
+    color: white;
+    background: none;
+    border: none;
+}
+.search-drop-down a{
+    color: white;
+}
+.search-drop-down a:link{
+    text-decoration: none;
+}
+.category-drop{
+    display: none;
+    background: rgb(62, 62, 112);
+    width: 240px;
+    margin-left: 30px;
+    padding: 9px 0px 10px;
+    font-size: 1vw;
+}
+.fa-caret-down {
+    float: right;
+    margin-top: -20px;
+    padding-right: 10px;
+}
+.drop-category-down #drop-content-list{
+    display: none;
+    width: 76%;
+    height: auto;
+    margin-left: 20px;
+    background:rgb(200, 200, 245);
+}
+.drop-category-down #drop-content-list li{
+    list-style-type: none;
+    padding: 20px;
+    display: block;
+}
+.drop-category-down #drop-content-list li a{
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+
 @media only screen and (max-width:450px) {
     .side-bar{
         display: none;

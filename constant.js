@@ -962,5 +962,31 @@ const data = {
             "date_of_borrow":"15/02/2021"
          }
       ]
-   }
+   },
+   "category": [
+      "Health",
+      "Family",
+      "Personal Development",
+      "Arts", 
+      "Film", 
+      "Photography",
+      "Crafts",
+      "Hobbies",
+      "Practical Interests",
+      "Literature", 
+      "Fiction",
+      "Region",
+      "Countries",
+      "Biographies",
+      "Diaries",
+      "Politics",
+      "Higher Education",
+      "Business & Economics",
+      "Business & Finance",
+      "Medicine",
+      "Self-Help Books",
+      "General Books",
+      "Law ",
+      "Management"
+   ]
 }

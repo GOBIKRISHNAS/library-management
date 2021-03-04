@@ -24,10 +24,17 @@
             <li><button class="tabslink" id="abooksbtn" onclick= "availablebooks();">Available Books</button></li>
             <li><button class="tabslink" id="nbooksbtn" onclick = "newarrivals();">New Arrivals</button></li>
             <li><button class="tabslink" id="bbooksbtn" onclick = "booksborrowed();">Books Borrowed</button></li>
+            <li><button class="tabslink" id="searchbtn" onclick = "search();">Search<i class="fa fa-caret-right"></i></button></li>
             <li><button class="tabslink"><a href= "https://gobikrishnas.github.io/library-management/">Logout</a></button></li>
          </div>
       </div>
-      <div id= "dashboard" class="dashboard">
+      <div class="main-class-content">
+         <div class="search-drop-down" id="search-drop-down">
+            <li><button class="tabslink1" id="namesearch">Search by Books Name</button></li>
+            <li><button class="tabslink1" id="authorsearch">Search by Author Name</button></li>
+            <li><button class="tabslink1" id="categorysearch">Search by Category</button></li>
+         </div>
+         <div id= "dashboard" class="dashboard">
          <div class="content-dashboard">
             <div class="book-details">
                <button onclick = "newarrivals();"><div><hr>New Arrivals<hr><div id="new-arrivals"></div></div></button>
@@ -46,7 +53,14 @@
          </div>
       </div>
       <div id= "availablebooks" class="availablebooks">
-         <input type="text" name ="search" class="searchTerm" id="myInput" onkeyup="myFunction()" placeholder="Search for books by name or author or category..." title="Type in a name">
+         <button class="category-drop" id="category-drop"><div id="category-text">Select Category</div><i class="fa fa-caret-down"></i></button>
+         <input type="text" name ="search" class="searchTerm" id="myInput" onkeyup="myFunction(); filterFunction();" placeholder="Search for books by name or author or category..." title="Type in a name">
+         <div class="drop-category-down" id="drop-category-down">
+            <section>
+               <ul id="drop-content-list">
+               </ul>
+            </section>
+         </div>
          <div id="wrapper">
           <section>
             <ul id="content1"></ul>
@@ -75,6 +89,8 @@
               </section>
           </div>
       </div>
+   </div>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <script src="../constant.js"></script>
       <script src="../jquery.js"></script>
       <script src="../handlebars.js"></script>
