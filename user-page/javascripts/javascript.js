@@ -123,14 +123,14 @@ function newarrivals() {
 }
 function booksborrowed() {
     obj = document.getElementById('bbooksbtn');
-    var source   = document.getElementById('text-template-1').innerHTML;
+    var source   = document.getElementById('text-template-2').innerHTML;
     var template = Handlebars.compile(source);
     str=""
 
     if (books_borrowed[user_name].length>0){
         for (i = 0; i < books_borrowed[user_name].length; i++) {
-            func = "popup("+ i +");"
-            var context = { img_url: new_arrivals[i].img_url, name: new_arrivals[i].name, author: new_arrivals[i].author, cost: new_arrivals[i].cost, books_available: new_arrivals[i].books_available};
+            func = "borrow_popup("+ i +");"
+            var context = { function_call: func, img_url: books_borrowed[user_name][i].img_url, name:books_borrowed[user_name][i].name, author: books_borrowed[user_name][i].author};
             var html    = template(context);
             str = str + html
         } 
@@ -176,6 +176,23 @@ function popup(i){
      }
 }
 
+function borrow_popup(i){
+    document.getElementById("bookspopup").style.display = "block";
+    var x = window.matchMedia("(max-width: 700px)")
+    if (x.matches) { 
+        index = i+1
+        str = "<img src = '"+ books_borrowed[user_name][i].img_url + "' alt='' width=180px id='pic'><div class='details'><h1>" + books_borrowed[user_name][i].name + "</h1><p>" + books_borrowed[user_name][i].author +"</p><p>Cost: " + books_borrowed[user_name][i].cost + "</p><p>Borrowed Date: " + books_borrowed[user_name][i].date_of_borrow + "</p><p>Return Date: " + books_borrowed[user_name][i].date_of_return + "</p><button>Return</button></div>"
+        document.getElementById("popup").innerHTML = str ;
+        document.getElementById("side-bar").style.filter = "blur(2px)";
+        document.getElementById("availablebooks").style.filter = "blur(2px)";
+      } else  {
+        index = i+1
+        str = "<img src = '"+ books_borrowed[user_name][i].img_url + "' alt='' width=180px id='pic'><div class='details'><h1>" + books_borrowed[user_name][i].name + "</h1><p>" + books_borrowed[user_name][i].author +"</p><p>Cost: " + books_borrowed[user_name][i].cost + "</p><p>Borrowed Date: " + books_borrowed[user_name][i].date_of_borrow + "</p><p>Return Date: " + books_borrowed[user_name][i].date_of_return + "</p><button>Return</button></div>"
+        document.getElementById("popup").innerHTML = str ;
+        document.getElementById("side-bar").style.filter = "blur(2px)";
+        document.getElementById("availablebooks").style.filter = "blur(2px)";
+     }
+}
 function span(i){
     var x = window.matchMedia("(max-width: 700px)")
     if(x.matches) { 
