@@ -64,7 +64,7 @@ body {
 }
 #popup .details button{
     position: fixed;
-    font-size: 15px;
+    font-size: 20px;
     color: black;
     border-radius: 4px;
     background-color:  rgb(158, 158, 161);
