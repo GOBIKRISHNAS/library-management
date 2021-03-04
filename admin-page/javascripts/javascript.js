@@ -17,7 +17,9 @@ document.getElementById("total-users").innerHTML = Object.keys(books_borrowed).l
 
 function dashboard() {
     obj = document.getElementById('dashbtn')
-    var current = document.getElementsByClassName("active");
+    // var current = document.getElementsByClassName("active");
+    var current = document.querySelectorAll(".side-bar .options-list .active");
+    
     current[0].classList.remove("active");
     
     obj.classList.add("active");
@@ -71,7 +73,7 @@ function availablebooks() {
         return index
     } 
     
-    var current = document.getElementsByClassName("active");
+    var current = document.querySelectorAll(".side-bar .options-list .active");
     current[0].classList.remove("active");
     
     obj.classList.add("active");
@@ -110,7 +112,7 @@ function newarrivals() {
         str = "NO Books Available"
     }
      
-    var current = document.getElementsByClassName("active");
+    var current = document.querySelectorAll(".side-bar .options-list .active");
     current[0].classList.remove("active");
     
     obj.classList.add("active");
@@ -145,7 +147,7 @@ function booksborrowed() {
         str3 = str3 + str2
     }
     
-    var current = document.getElementsByClassName("active");
+    var current = document.querySelectorAll(".side-bar .options-list .active");
     current[0].classList.remove("active");
     // current[0].className = current[0].className.substr(0,8);
     
@@ -167,7 +169,7 @@ function booksborrowed() {
 
 function addbooks(){
     obj = document.getElementById('addbooksbtn');
-    var current = document.getElementsByClassName("active");
+    var current = document.querySelectorAll(".side-bar .options-list .active");
     current[0].classList.remove("active");
     
     obj.classList.add("active");

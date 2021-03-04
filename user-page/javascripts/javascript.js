@@ -13,7 +13,7 @@ document.getElementById("credit-score").innerHTML = books_borrowed[user_name].le
 
 function dashboard() {
     obj = document.getElementById('dashbtn')
-    var current = document.getElementsByClassName("active");
+    var current = document.querySelectorAll(".side-bar .options-list .active");
     current[0].classList.remove("active");
     
     obj.classList.add("active");
@@ -67,7 +67,7 @@ function availablebooks() {
         return index
     } 
 
-    var current = document.getElementsByClassName("active");
+    var current = document.querySelectorAll(".side-bar .options-list .active");
     current[0].classList.remove("active");
     
     obj.classList.add("active");
@@ -106,7 +106,7 @@ function newarrivals() {
         str = "NO Books Available"
     }
    
-    var current = document.getElementsByClassName("active");
+    var current = document.querySelectorAll(".side-bar .options-list .active");
     current[0].classList.remove("active");
     
     obj.classList.add("active");
@@ -140,7 +140,7 @@ function booksborrowed() {
         str = "No Books Available"
     }
 
-    var current = document.getElementsByClassName("active");
+    var current = document.querySelectorAll(".side-bar .options-list .active");
     current[0].classList.remove("active");
     // current[0].className = current[0].className.substr(0,8);
     
