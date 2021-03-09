@@ -413,20 +413,35 @@ function filterFunction() {
 
 var addbookbtn = document.getElementById("addbookbtn");
 addbookbtn.onclick = function() {
-	url = document.getElementById("url").value;
-    console.log(url.match(/\.(jpeg|jpg|png)$/) != null);
-	document.getElementById("url-img").src = url;
-	console.log(getImageSizeInBytes(url))
-    getImageSizeInBytes(document.getElementById("url").value)
-
+    var fileelement = document.getElementById("file-input").value;
+	urielement = document.getElementById("url").value;
+	url = fileelement||urielement
+    if(url.match(/\.(jpeg|jpg|png)$/) == null){
+		document.getElementById("image_error").innerHTML = "Provided must contain image of any of these types..i.e. jpeg, jpg, png."
+	}
+	
+    var fi = document.getElementById('file-input');
+    if (fi.files.length > 0) {
+        for (var i = 0; i <= fi.files.length - 1; i++) {
+            var fsize = fi.files.item(i).size;
+            var file = Math.round((fsize / 1024));
+            if (file >= 1024) {
+				document.getElementById("image_error").innerHTML = "Provided must contain image of size <1mb."
+            } 
+        }
+    }
 }
 
-function getImageSizeInBytes(imgURL) {
-    var request = new XMLHttpRequest();
-    request.open("HEAD", imgURL, false);
-    request.send(null);
-    var headerText = request.getAllResponseHeaders();
-    var re = /Content\-Length\s*:\s*(\d+)/i;
-    re.exec(headerText);
-    return parseInt(RegExp.$1);
+var urlelement = document.getElementById("url");
+urlelement.onkeyup = function(){
+	document.getElementById("image_error").innerHTML = ""
+}
+
+var fileelement = document.getElementById("file-input");
+fileelement.onclick = function(){
+	document.getElementById("image_error").innerHTML = "";
+}
+
+fileelement.onchange = function(){
+	document.getElementById("url").placeholder = document.getElementById("file-input").value;
 }
