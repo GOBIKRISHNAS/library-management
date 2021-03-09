@@ -410,3 +410,23 @@ function filterFunction() {
 		}
 	}
 }
+
+var addbookbtn = document.getElementById("addbookbtn");
+addbookbtn.onclick = function() {
+	url = document.getElementById("url").value;
+    console.log(url.match(/\.(jpeg|jpg|png)$/) != null);
+	document.getElementById("url-img").src = url;
+	console.log(getImageSizeInBytes(url))
+    getImageSizeInBytes(document.getElementById("url").value)
+
+}
+
+function getImageSizeInBytes(imgURL) {
+    var request = new XMLHttpRequest();
+    request.open("HEAD", imgURL, false);
+    request.send(null);
+    var headerText = request.getAllResponseHeaders();
+    var re = /Content\-Length\s*:\s*(\d+)/i;
+    re.exec(headerText);
+    return parseInt(RegExp.$1);
+}
