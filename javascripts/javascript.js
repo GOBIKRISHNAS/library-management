@@ -71,7 +71,7 @@ function validationForm1() {
         document.getElementById("mobileno_error").innerHTML = "Enter Valid Mobile Number..."
     } else {
 
-        var regx1 = /^([a-zA-Z0-9/.-]+)@([a-zA-Z0-9-]+).([a-z]{2,20})(.[a-z]{2,8})$/
+        var regx1 = /^[a-zA-Z0-9.!#$%&'*+\=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
         if (!regx1.test(email)) {
             document.getElementById("mobileno_error").innerHTML = ""
             document.getElementById("email_error").innerHTML = "Enter Valid Email id..."
