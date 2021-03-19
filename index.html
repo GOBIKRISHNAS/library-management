@@ -1,38 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link href="styles/style.css" rel="stylesheet">
-      <title>Welcome Page</title>
-   </head>
-   <body>
-      <h1>Welcome</h1>
-      <hr>
-      <h2>Library Management</h2>
-      <button id="myBtn">Sign In</button>
-      <div id = "form" class="form-container">
-         <span class="close">&times;</span>
-         <div class="user-img"></div>
-         <ul class="list">
-            <li>
-               <h2>Login</h2>
-            </li>
-            <li>
-               <input type="text" id="name" name="User Name" placeholder="User Name">
-               <span class="error"><p id="username_error"></p></span>
-            </li>
-            <li>
-               <input type="text" name="Password" placeholder="Password">
-               <span class="error"><p id="password_error"></p></span>
-            </li>
-            <li><button onclick="validationForm();directPage();">Login</button></li>
-            <li>Forgot Password?</li>
-         </ul>
-      </div>
-      <script src="constant.js"></script>
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="styles/style.css" rel="stylesheet">
+   <title>Welcome Page</title>
+</head>
+
+<body>
+   <h1>Welcome</h1>
+   <hr>
+   <h2>Library Management</h2>
+   <button id="myBtn">Sign In</button>
+   <button id="myBtn1">Sign Up</button>
+   <div id="loginform" class="form-container">
+      <span class="close">&times;</span>
+      <div class="user-img"></div>
+      <ul class="list">
+         <li>
+            <h2>Login</h2>
+         </li>
+         <li>
+            <input type="text" id="name" name="User Name" placeholder="User Name">
+            <span class="error">
+               <p id="username_error"></p>
+            </span>
+         </li>
+         <li>
+            <input type="text" name="Password" placeholder="Password">
+            <span class="error">
+               <p id="password_error"></p>
+            </span>
+         </li>
+         <li><button onclick="validationForm();directPage();">Login</button></li>
+         <li>Forgot Password?</li>
+      </ul>
+   </div>
+   <div id="signform" class="form-container1">
+      <span class="close">&times;</span>
+      <div class="user-img"></div>
+      <ul class="list">
+         <li>
+            <h2>Sign Up</h2>
+         </li>
+         <li>
+            <input type="text" id="name1" name="User Name" placeholder="User Name">
+            <span class="error">
+               <p id="username_error"></p>
+            </span>
+         </li>
+         <li>
+            <input type="text" name="Mobile Number" placeholder="Mobile Number">
+            <span class="error">
+               <p id="mobileno_error"></p>
+            </span>
+         </li>
+         <li>
+            <input type="text" name="Email ID" placeholder="Email ID">
+            <span class="error">
+               <p id="email_error"></p>
+            </span>
+         </li>
+         <li>
+            <input type="text" name="Password1" placeholder="Password">
+            <span class="error">
+               <p id="password_error1"></p>
+            </span>
+         </li>
+         <li>
+            <input type="text" name="CPassword" placeholder="Confirm Password">
+            <span class="error">
+               <p id="password_error2"></p>
+            </span>
+         </li>
+         <li><button onclick="validationForm1();directPage();">Sign Up</button></li>
+      </ul>
+   </div>
+      <script src="./constant.js"></script>
       <script src="javascripts/javascript.js"></script>
-      
-   </body>
+</body>
+
 </html>

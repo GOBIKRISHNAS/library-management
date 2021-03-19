@@ -9,7 +9,7 @@ body{
   top:50%;
   left:50%
   }
-  .form-container {
+  .form-container, .form-container1, .popup {
   background-color: bisque;
   display: none; /* Hidden by default */
   position: absolute; /* Stay in place */
@@ -76,7 +76,7 @@ body{
   text-decoration: none;
   cursor: pointer;
   }
-  #myBtn{
+  #myBtn,#myBtn1{
   padding: 10px 20px;
   background-color:  white;
   border: none;
