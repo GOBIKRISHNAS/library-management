@@ -89,10 +89,7 @@ function validationForm1() {
                     document.getElementById("mobileno_error").innerHTML = ""
                     document.getElementById("email_error").innerHTML = ""
                     document.getElementById("password_error1").innerHTML = "Password must contain a Upper case, Lower Case, Special Charcter and more than 8 digit.."
-                }
-
-
-                if (cpassword == "") {
+                }else if (cpassword == "") {
                     document.getElementById("mobileno_error").innerHTML = ""
                     document.getElementById("email_error").innerHTML = ""
                     document.getElementById("password_error1").innerHTML = ""
